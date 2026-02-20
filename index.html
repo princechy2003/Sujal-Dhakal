@@ -1,14 +1,13 @@
 <!doctype html>
 <html lang="en" class="h-full">
- <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gracelight Creations - Digital Marketing Agency</title>
+  <title>Sujal Dhakal - Video Editor</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/_sdk/element_sdk.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     body {
       box-sizing: border-box;
@@ -25,12 +24,12 @@
     }
     
     .nav-link.active {
-      color: #a78bfa !important;
+      color: #8b5cf6 !important;
       font-weight: 600;
     }
     
     .nav-link:hover {
-      color: #a78bfa !important;
+      color: #8b5cf6 !important;
     }
     
     @keyframes fadeIn {
@@ -58,12 +57,12 @@
       transform: scale(1.05);
     }
 
-    /* ---- CUSTOM CURSOR GLOW ---- */
+    /* Custom Cursor Glow */
     #glow-cursor {
       position: fixed;
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(168,85,247,0.25) 0%, rgba(236,72,153,0.15) 40%, transparent 70%);
+      background: radial-gradient(circle, rgba(109,40,217,0.25) 0%, rgba(30,58,138,0.15) 40%, transparent 70%);
       border-radius: 50%;
       pointer-events: none;
       z-index: 9999;
@@ -72,19 +71,7 @@
       mix-blend-mode: screen;
     }
 
-    /* ========== REMOVE RECTANGULAR GLOW, REPLACE WITH SHIMMER ========== */
-    a, button, .group, .hover-glow, .nav-link, [data-page], 
-    .bg-gradient-to-r, .rounded-2xl, .rounded-xl, .rounded-3xl,
-    a:hover, button:hover, .group:hover, .nav-link:hover, [data-page]:hover,
-    .bg-gradient-to-r:hover, .rounded-2xl:hover, .rounded-xl:hover, .rounded-3xl:hover {
-      box-shadow: none !important;
-    }
-
-    @keyframes shimmer {
-      0% { transform: translateX(-150%); }
-      100% { transform: translateX(150%); }
-    }
-
+    /* Shimmer effect */
     .bg-gradient-to-r,
     .whatsapp-btn,
     .px-8.py-4, 
@@ -119,8 +106,9 @@
       pointer-events: none;
     }
 
-    .whatsapp-btn {
-      animation: pulse 2s infinite;
+    @keyframes shimmer {
+      0% { transform: translateX(-150%); }
+      100% { transform: translateX(150%); }
     }
 
     .rounded-2xl, .rounded-xl, .rounded-3xl {
@@ -128,7 +116,7 @@
     }
     .rounded-2xl:hover, .rounded-xl:hover, .rounded-3xl:hover {
       transform: scale(1.02);
-      border-color: rgba(168,85,247,0.5);
+      border-color: rgba(109,40,217,0.5);
     }
 
     #project-detail .detail-content {
@@ -136,14 +124,13 @@
       margin: 0 auto;
     }
 
-    /* Filter tabs active state */
     .filter-tab.active {
-      background: rgba(168,85,247,0.3);
-      border-color: rgba(168,85,247,0.8);
+      background: rgba(109,40,217,0.3);
+      border-color: rgba(109,40,217,0.8);
       color: white;
     }
 
-    /* ========== PREMIUM LIQUID GLASS EFFECT FOR NAVBAR - FIXED ========== */
+    /* Navbar scroll effect */
     nav {
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
@@ -153,12 +140,11 @@
       background: rgba(15, 23, 42, 0.4) !important;
       backdrop-filter: blur(20px) saturate(180%) !important;
       -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-      border-bottom: 1px solid rgba(168, 85, 247, 0.5) !important;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(168, 85, 247, 0.1) inset;
-      overflow: hidden; /* Clips both pseudo-elements to navbar bounds */
+      border-bottom: 1px solid rgba(109, 40, 217, 0.5) !important;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(109, 40, 217, 0.1) inset;
+      overflow: hidden;
     }
 
-    /* Radial glow - contained within navbar */
     nav.scrolled::before {
       content: '';
       position: absolute;
@@ -167,8 +153,8 @@
       width: 100%;
       height: 100%;
       background: radial-gradient(circle at 30% 50%, 
-        rgba(168, 85, 247, 0.15) 0%,
-        rgba(236, 72, 153, 0.1) 40%,
+        rgba(109, 40, 217, 0.15) 0%,
+        rgba(30, 58, 138, 0.1) 40%,
         transparent 80%
       );
       animation: liquidFlow 12s infinite alternate ease-in-out;
@@ -177,7 +163,6 @@
       mix-blend-mode: screen;
     }
 
-    /* Liquid slide effect - now clipped by overflow:hidden */
     nav.scrolled::after {
       content: '';
       position: absolute;
@@ -189,7 +174,7 @@
         90deg,
         transparent,
         rgba(255, 255, 255, 0.05),
-        rgba(168, 85, 247, 0.1),
+        rgba(109, 40, 217, 0.1),
         rgba(255, 255, 255, 0.05),
         transparent
       );
@@ -210,7 +195,6 @@
       100% { left: -100%; opacity: 0.3; }
     }
 
-    /* Fade-in animation for sections */
     .fade-section {
       opacity: 0;
       transform: translateY(30px);
@@ -222,1466 +206,567 @@
       transform: translateY(0);
     }
   </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
- </head>
- <body class="h-full bg-slate-950 text-white">
-  <!-- MOUSE GLOW CIRCLE -->
-  
+</head>
+<body class="h-full bg-slate-950 text-white">
+  <!-- Mouse Glow -->
   <div id="glow-cursor"></div>
 
   <div id="app-container" class="w-full h-full overflow-auto">
    
-   <!-- WhatsApp Floating Button - Nepal number -->
-   <div class="fixed bottom-6 right-6 z-50">
-    <a href="https://wa.me/9779807007817?text=Hi%20Gracelight%20Creations!%20I'm%20interested%20in%20your%20services" 
-       target="_blank" 
-       class="whatsapp-btn block w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg transition-all duration-300 group">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.371-.025-.521-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.012-.57-.012-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.677-.236-.375a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.158 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.89-11.893 0-3.18-1.24-6.162-3.495-8.411"/>
-      </svg>
-      <span class="absolute -top-2 -right-2 bg-white text-[#25D366] text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center group-hover:scale-110 transition-transform">
-        ↓
-      </span>
-    </a>
-   </div>
-<!-- Add this right after the opening body tag, before the nav -->
-<div class="top-glow"></div>
+    <!-- WhatsApp Floating Button (updated number) -->
+    <div class="fixed bottom-6 right-6 z-50">
+      <a href="https://wa.me/9779807007817?text=Hi%20Sujal!%20I'm%20interested%20in%20your%20video%20editing%20services" 
+         target="_blank" 
+         class="whatsapp-btn block w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg transition-all duration-300 group">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.371-.025-.521-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.012-.57-.012-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.677-.236-.375a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.158 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.89-11.893 0-3.18-1.24-6.162-3.495-8.411"/>
+        </svg>
+        <span class="absolute -top-2 -right-2 bg-white text-[#25D366] text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center group-hover:scale-110 transition-transform">↓</span>
+      </a>
+    </div>
 
-<!-- Then your existing nav and content -->
-   <!-- Navigation -->
-   <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-purple-500/20 transition-all duration-500">
-    <div class="max-w-7xl mx-auto px-6 py-4">
-     <div class="flex items-center justify-between">
-      <div class="flex items-center gap-3 logo-container">
-               <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-blue-900 flex items-center justify-center overflow-hidden">
-              <img src="gracelogo.jpeg" alt="Prince K. Chaudhary" class="w-full h-full object-cover">
+    <!-- Navigation (name changed) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-purple-500/20 transition-all duration-500">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3 logo-container">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-blue-900 flex items-center justify-center overflow-hidden">
+              <!-- Placeholder avatar, could use a different image -->
+              <span class="text-white font-bold text-xl">SD</span>
             </div>
-       <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Gracelight Creations</span>
+            <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Sujal Dhakal</span>
+          </div>
+          <div class="hidden md:flex items-center gap-6">
+            <a href="#" data-page="home" class="nav-link active text-sm font-medium text-purple-400 transition-colors">Home</a>
+            <a href="#" data-page="about" class="nav-link text-sm text-gray-300 hover:text-purple-400 transition-colors">About</a>
+            <a href="#" data-page="services" class="nav-link text-sm text-gray-300 hover:text-purple-400 transition-colors">Services</a>
+            <a href="#" data-page="portfolio" class="nav-link text-sm text-gray-300 hover:text-purple-400 transition-colors">Portfolio</a>
+            <a href="#" data-page="testimonials" class="nav-link text-sm text-gray-300 hover:text-purple-400 transition-colors">Testimonials</a>
+            <a href="#" data-page="contact" class="px-5 py-2 bg-gradient-to-r from-purple-600 to-blue-900 rounded-lg text-sm font-semibold transition-all">Contact</a>
+          </div>
+          <button id="mobile-menu-toggle" class="md:hidden p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+          <a href="#" data-page="home" class="block nav-link active text-purple-400 font-medium transition-colors">Home</a>
+          <a href="#" data-page="about" class="block nav-link text-gray-300 hover:text-purple-400 transition-colors">About</a>
+          <a href="#" data-page="services" class="block nav-link text-gray-300 hover:text-purple-400 transition-colors">Services</a>
+          <a href="#" data-page="portfolio" class="block nav-link text-gray-300 hover:text-purple-400 transition-colors">Portfolio</a>
+          <a href="#" data-page="testimonials" class="block nav-link text-gray-300 hover:text-purple-400 transition-colors">Testimonials</a>
+          <a href="#" data-page="contact" class="block nav-link text-gray-300 hover:text-purple-400 transition-colors">Contact</a>
+        </div>
       </div>
-      <div class="hidden md:flex items-center gap-6">
-        <a href="#" data-page="home" class="nav-link active text-sm font-medium text-purple-400 transition-colors">Home</a>
-        <a href="#" data-page="about" class="nav-link text-sm text-gray-300 hover:text-purple-400 transition-colors">About</a>
-        <a href="#" data-page="services" class="nav-link text-sm text-gray-300 hover:text-purple-400 transition-colors">Services</a>
-        <a href="#" data-page="portfolio" class="nav-link text-sm text-gray-300 hover:text-purple-400 transition-colors">Portfolio</a>
-        <a href="#" data-page="industries" class="nav-link text-sm text-gray-300 hover:text-purple-400 transition-colors">Industries</a>
-        <a href="#" data-page="pricing" class="nav-link text-sm text-gray-300 hover:text-purple-400 transition-colors">Pricing</a>
-        <a href="#" data-page="testimonials" class="nav-link text-sm text-gray-300 hover:text-purple-400 transition-colors">Testimonials</a>
-        <a href="#" data-page="contact" class="px-5 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-sm font-semibold transition-all">Contact</a>
-      </div>
-      <button id="mobile-menu-toggle" class="md:hidden p-2">
-       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-       </svg>
-      </button>
-     </div>
-     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-3">
-      <a href="#" data-page="home" class="block nav-link active text-purple-400 font-medium transition-colors">Home</a>
-      <a href="#" data-page="about" class="block nav-link text-gray-300 hover:text-purple-400 transition-colors">About</a>
-      <a href="#" data-page="services" class="block nav-link text-gray-300 hover:text-purple-400 transition-colors">Services</a>
-      <a href="#" data-page="portfolio" class="block nav-link text-gray-300 hover:text-purple-400 transition-colors">Portfolio</a>
-      <a href="#" data-page="industries" class="block nav-link text-gray-300 hover:text-purple-400 transition-colors">Industries</a>
-      <a href="#" data-page="pricing" class="block nav-link text-gray-300 hover:text-purple-400 transition-colors">Pricing</a>
-      <a href="#" data-page="testimonials" class="block nav-link text-gray-300 hover:text-purple-400 transition-colors">Testimonials</a>
-      <a href="#" data-page="contact" class="block nav-link text-gray-300 hover:text-purple-400 transition-colors">Contact</a>
-     </div>
-    </div>
-   </nav>
+    </nav>
 
-   <!-- ========== HOME PAGE (COMPLETE) ========== -->
-   <section id="home" class="page-section active pt-24">
-    <div class="max-w-7xl mx-auto px-6 py-20">
-     <div class="text-center max-w-4xl mx-auto mb-20 fade-section">
-      <div class="inline-block mb-6 px-6 py-2 rounded-full bg-purple-500/20 border border-purple-500/40">
-       <span class="text-purple-300 font-semibold">✨ Trusted by 150+ Growing Businesses</span>
-      </div>
-      <h1 id="hero-headline" class="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">Transform Your Digital Presence Into Growth</h1>
-      <p id="hero-subheading" class="text-xl text-gray-400 mb-10 leading-relaxed">We help businesses unlock their full potential through creative content marketing, stunning designs, and data-driven strategies that deliver measurable results.</p>
-      <div class="flex flex-wrap gap-4 justify-center mb-12">
-        <a href="#" data-page="contact" class="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl font-semibold transition-all">Get Free Consultation</a>
-        <a href="#" data-page="portfolio" class="px-8 py-4 border border-purple-500/50 rounded-xl font-semibold hover:bg-purple-500/10 transition-all">View Our Work</a>
-      </div>
-      <!-- Stats Bar -->
-      <div class="flex flex-wrap justify-center gap-8 text-center">
-       <div>
-        <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent stat-number" data-target="150">0</div>
-        <div class="text-sm text-gray-500">Happy Clients</div>
-       </div>
-       <div class="w-px h-12 bg-purple-500/30"></div>
-       <div>
-        <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent stat-number" data-target="500">0</div>
-        <div class="text-sm text-gray-500">Projects Completed</div>
-       </div>
-       <div class="w-px h-12 bg-purple-500/30"></div>
-       <div>
-        <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent stat-number" data-target="98">0</div>
-        <div class="text-sm text-gray-500">Client Retention</div>
-       </div>
-       <div class="w-px h-12 bg-purple-500/30"></div>
-       <div>
-        <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent stat-number" data-target="5">0.0</div>
-        <div class="text-sm text-gray-500">Average Rating</div>
-       </div>
-      </div>
-     </div>
-     
-     <!-- Services Overview -->
-     <div class="mb-20 fade-section">
-      <h2 class="text-3xl font-bold text-center mb-12">What We Do Best</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-       <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all group">
-        <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🎨</div>
-        <h3 class="text-xl font-bold mb-3">Social Media & Design</h3>
-        <p class="text-gray-400 mb-4">Engaging content and stunning visuals that stop the scroll and drive engagement across all platforms.</p>
-        <ul class="space-y-2 text-sm text-gray-500">
-         <li>✓ Content Strategy & Planning</li>
-         <li>✓ Instagram, Facebook, LinkedIn</li>
-         <li>✓ Daily Posting & Scheduling</li>
-         <li>✓ Community Management</li>
-        </ul>
-       </div>
-       <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all group">
-        <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🎬</div>
-        <h3 class="text-xl font-bold mb-3">Video Production</h3>
-        <p class="text-gray-400 mb-4">Professional video editing for reels, shorts, and promos that capture attention and tell your story.</p>
-        <ul class="space-y-2 text-sm text-gray-500">
-         <li>✓ Reels & Short-Form Videos</li>
-         <li>✓ YouTube Content</li>
-         <li>✓ Promotional Videos</li>
-         <li>✓ Motion Graphics</li>
-        </ul>
-       </div>
-       <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all group">
-        <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">💻</div>
-        <h3 class="text-xl font-bold mb-3">Web Development</h3>
-        <p class="text-gray-400 mb-4">Modern, responsive websites that convert visitors into customers and grow your business online.</p>
-        <ul class="space-y-2 text-sm text-gray-500">
-         <li>✓ Custom Website Design</li>
-         <li>✓ Mobile-First Approach</li>
-         <li>✓ SEO Optimization</li>
-         <li>✓ Fast Loading Speed</li>
-        </ul>
-       </div>
-      </div>
-     </div>
-     
-     <!-- Why Choose Us -->
-     <div class="mb-20 fade-section">
-      <div class="text-center mb-12">
-       <h2 class="text-3xl font-bold mb-4">Why Businesses Choose Gracelight</h2>
-       <p class="text-gray-400">We're not just another agency — we're your growth partner</p>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-       <div class="p-6 rounded-xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 text-center">
-        <div class="text-4xl mb-3">⚡</div>
-        <h4 class="font-bold mb-2">Lightning Fast Delivery</h4>
-        <p class="text-sm text-gray-400">Get your projects delivered on time, every time. Quick turnaround without compromising quality.</p>
-       </div>
-       <div class="p-6 rounded-xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 text-center">
-        <div class="text-4xl mb-3">💰</div>
-        <h4 class="font-bold mb-2">Transparent Pricing</h4>
-        <p class="text-sm text-gray-400">No hidden fees or surprises. Clear, competitive pricing that fits your budget and delivers value.</p>
-       </div>
-       <div class="p-6 rounded-xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 text-center">
-        <div class="text-4xl mb-3">📊</div>
-        <h4 class="font-bold mb-2">Data-Driven Results</h4>
-        <p class="text-sm text-gray-400">Every decision backed by analytics. We track what matters and optimize for maximum ROI.</p>
-       </div>
-       <div class="p-6 rounded-xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 text-center">
-        <div class="text-4xl mb-3">🤝</div>
-        <h4 class="font-bold mb-2">Dedicated Support</h4>
-        <p class="text-sm text-gray-400">24/7 support whenever you need us. Your dedicated account manager is just a call away.</p>
-       </div>
-      </div>
-     </div>
-     
-     <!-- Success Stories Preview -->
-     <div class="mb-20 p-12 rounded-3xl bg-gradient-to-br from-teal-900/40 to-cyan-900/40 border border-teal-500/30 fade-section">
-      <div class="text-center mb-10">
-       <h2 class="text-3xl font-bold mb-4">Real Results, Real Impact</h2>
-       <p class="text-gray-400">See what our clients have achieved with Gracelight</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-       <div class="text-center">
-        <div class="text-5xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">+340%</div>
-        <div class="text-gray-400 mb-2">Engagement Increase</div>
-        <div class="text-sm text-gray-500">Restaurant Social Media Campaign</div>
-       </div>
-       <div class="text-center">
-        <div class="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">2x</div>
-        <div class="text-gray-400 mb-2">Student Enrollment</div>
-        <div class="text-sm text-gray-500">Educational Institution Strategy</div>
-       </div>
-       <div class="text-center">
-        <div class="text-5xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-2">5x</div>
-        <div class="text-gray-400 mb-2">Return on Ad Spend</div>
-        <div class="text-sm text-gray-500">E-commerce Performance Campaign</div>
-       </div>
-      </div>
-      <div class="text-center mt-10">
-       <a href="#" data-page="testimonials" class="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors">Read All Success Stories <span>→</span></a>
-      </div>
-     </div>
-     
-     <!-- Process Section -->
-     <div class="mb-20 fade-section">
-      <div class="text-center mb-12">
-       <h2 class="text-3xl font-bold mb-4">Our Proven Process</h2>
-       <p class="text-gray-400">From strategy to execution — here's how we work</p>
-      </div>
-      <div class="grid md:grid-cols-4 gap-6">
-       <div class="relative">
-        <div class="p-6 rounded-xl bg-gradient-to-br from-teal-900/30 to-cyan-900/30 border border-teal-500/20 h-full">
-         <div class="w-12 h-12 rounded-full bg-gradient-to-r from-teal-500 to-amber-500 flex items-center justify-center font-bold text-xl mb-4">1</div>
-         <h4 class="font-bold mb-2">Discovery Call</h4>
-         <p class="text-sm text-gray-400">We learn about your business, goals, and challenges in a free consultation.</p>
+    <!-- ========== HOME PAGE ========== (updated name and role) -->
+    <section id="home" class="page-section active pt-24">
+      <div class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center max-w-4xl mx-auto mb-20 fade-section">
+          <div class="inline-block mb-6 px-6 py-2 rounded-full bg-purple-500/20 border border-purple-500/40">
+            <span class="text-purple-300 font-semibold">✨ Professional Video Editor</span>
+          </div>
+          <h1 id="hero-headline" class="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Visual Stories, Perfectly Edited</h1>
+          <p id="hero-subheading" class="text-xl text-gray-400 mb-10 leading-relaxed">I'm Sujal – a passionate video editor with a keen eye for detail, crafting engaging narratives for YouTube, commercials, social media, and more.</p>
+          <div class="flex flex-wrap gap-4 justify-center mb-12">
+            <a href="#" data-page="contact" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-900 rounded-xl font-semibold transition-all">Hire Me</a>
+            <a href="#" data-page="portfolio" class="px-8 py-4 border border-purple-500/50 rounded-xl font-semibold hover:bg-purple-500/10 transition-all">View My Work</a>
+          </div>
+          <!-- Stats (adjusted) -->
+          <div class="flex flex-wrap justify-center gap-8 text-center">
+            <div>
+              <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent stat-number" data-target="4">0</div>
+              <div class="text-sm text-gray-500">Years Experience</div>
+            </div>
+            <div class="w-px h-12 bg-purple-500/30"></div>
+            <div>
+              <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent stat-number" data-target="120">0</div>
+              <div class="text-sm text-gray-500">Projects Edited</div>
+            </div>
+            <div class="w-px h-12 bg-purple-500/30"></div>
+            <div>
+              <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent stat-number" data-target="35">0</div>
+              <div class="text-sm text-gray-500">Happy Clients</div>
+            </div>
+          </div>
         </div>
-        <div class="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-teal-500 to-transparent"></div>
-       </div>
-       <div class="relative">
-        <div class="p-6 rounded-xl bg-gradient-to-br from-teal-900/30 to-cyan-900/30 border border-teal-500/20 h-full">
-         <div class="w-12 h-12 rounded-full bg-gradient-to-r from-teal-500 to-amber-500 flex items-center justify-center font-bold text-xl mb-4">2</div>
-         <h4 class="font-bold mb-2">Strategy Blueprint</h4>
-         <p class="text-sm text-gray-400">We create a customized strategy tailored to your specific needs and budget.</p>
+        
+        <!-- Services Overview (only video related) -->
+        <div class="mb-20 fade-section">
+          <h2 class="text-3xl font-bold text-center mb-12">Video Editing Specialties</h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all group">
+              <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🎬</div>
+              <h3 class="text-xl font-bold mb-3">YouTube & Shorts</h3>
+              <p class="text-gray-400 mb-4">Dynamic edits, engaging transitions, and color grading for YouTube content and Shorts.</p>
+              <ul class="space-y-2 text-sm text-gray-500">
+                <li>✓ Vlogs & Gaming</li>
+                <li>✓ Tutorials & Reviews</li>
+                <li>✓ Shorts & Reels</li>
+              </ul>
+            </div>
+            <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all group">
+              <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">📹</div>
+              <h3 class="text-xl font-bold mb-3">Commercial & Promo</h3>
+              <p class="text-gray-400 mb-4">High-impact ads, product promos, and brand stories that captivate audiences.</p>
+              <ul class="space-y-2 text-sm text-gray-500">
+                <li>✓ TV & Social Ads</li>
+                <li>✓ Corporate Videos</li>
+                <li>✓ Testimonials</li>
+              </ul>
+            </div>
+            <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all group">
+              <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🎥</div>
+              <h3 class="text-xl font-bold mb-3">Cinematic & Events</h3>
+              <p class="text-gray-400 mb-4">Beautifully crafted wedding films, music videos, and event highlights.</p>
+              <ul class="space-y-2 text-sm text-gray-500">
+                <li>✓ Wedding Highlights</li>
+                <li>✓ Music Videos</li>
+                <li>✓ Aftermovies</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-teal-500 to-transparent"></div>
-       </div>
-       <div class="relative">
-        <div class="p-6 rounded-xl bg-gradient-to-br from-teal-900/30 to-cyan-900/30 border border-teal-500/20 h-full">
-         <div class="w-12 h-12 rounded-full bg-gradient-to-r from-teal-500 to-amber-500 flex items-center justify-center font-bold text-xl mb-4">3</div>
-         <h4 class="font-bold mb-2">Creative Execution</h4>
-         <p class="text-sm text-gray-400">Our team brings your strategy to life with stunning content and campaigns.</p>
+        
+        <!-- Why Choose Me (keep but adjust) -->
+        <div class="mb-20 fade-section">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Why Work With Me</h2>
+            <p class="text-gray-400">I bring stories to life through precise editing and creative flair</p>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 rounded-xl bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/20 text-center">
+              <div class="text-4xl mb-3">⚡</div>
+              <h4 class="font-bold mb-2">Fast Turnaround</h4>
+              <p class="text-sm text-gray-400">Quality edits delivered on time, every time.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/20 text-center">
+              <div class="text-4xl mb-3">🎯</div>
+              <h4 class="font-bold mb-2">Detail-Oriented</h4>
+              <p class="text-sm text-gray-400">Every frame polished to perfection.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/20 text-center">
+              <div class="text-4xl mb-3">🤝</div>
+              <h4 class="font-bold mb-2">Client-Focused</h4>
+              <p class="text-sm text-gray-400">Your vision is my priority.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/20 text-center">
+              <div class="text-4xl mb-3">📈</div>
+              <h4 class="font-bold mb-2">Results Driven</h4>
+              <p class="text-sm text-gray-400">Edits that boost engagement.</p>
+            </div>
+          </div>
         </div>
-        <div class="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-teal-500 to-transparent"></div>
-       </div>
-       <div>
-        <div class="p-6 rounded-xl bg-gradient-to-br from-teal-900/30 to-cyan-900/30 border border-teal-500/20 h-full">
-         <div class="w-12 h-12 rounded-full bg-gradient-to-r from-teal-500 to-amber-500 flex items-center justify-center font-bold text-xl mb-4">4</div>
-         <h4 class="font-bold mb-2">Optimize & Scale</h4>
-         <p class="text-sm text-gray-400">We monitor performance, optimize continuously, and scale what works best.</p>
-        </div>
-       </div>
       </div>
-     </div>
+    </section>
 
-     <!-- Special Offer -->
-     <div class="mb-20 p-10 rounded-3xl bg-gradient-to-r from-teal-600/30 to-amber-600/30 border border-teal-500/40 relative overflow-hidden fade-section">
-      <div class="absolute top-0 right-0 w-64 h-64 bg-teal-500/20 rounded-full blur-3xl"></div>
-      <div class="relative z-10">
-       <div class="flex flex-wrap items-center justify-between gap-8">
-        <div class="flex-1">
-         <div class="inline-block px-4 py-1 rounded-full bg-yellow-500/20 border border-yellow-500/40 text-yellow-400 text-sm font-bold mb-4">🎉 LIMITED TIME OFFER</div>
-         <h3 class="text-3xl font-bold mb-3">Get a FREE Website Worth Rs 50,000!</h3>
-         <p class="text-gray-300 mb-4">Sign up for our 6-month Complete Growth Package and get a professional website absolutely free. Offer valid until end of month!</p>
-         <ul class="space-y-2 text-sm text-gray-400">
-          <li>✓ Custom website design & development</li>
-          <li>✓ Mobile responsive & SEO optimized</li>
-          <li>✓ Free hosting for first 6 months</li>
-          <li>✓ Plus all Complete Growth Package benefits</li>
-         </ul>
+    <!-- ========== ABOUT PAGE ========== (updated) -->
+    <section id="about" class="page-section pt-24">
+      <div class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center max-w-3xl mx-auto mb-16 fade-section">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">About <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Me</span></h1>
+          <p class="text-xl text-gray-400">Professional Video Editor</p>
         </div>
-        <div class="text-center">
-          <a href="#" data-page="contact" class="inline-block px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl font-bold transition-all">Claim This Offer →</a>
-          <div class="text-sm text-gray-400 mt-3">Only 5 spots remaining!</div>
+        <div class="grid lg:grid-cols-2 gap-12 mb-20 fade-section">
+          <div>
+            <h2 class="text-3xl font-bold mb-6">My Story</h2>
+            <p class="text-gray-400 text-lg mb-4">Hi, I'm Sujal Dhakal – a dedicated video editor with over 4 years of experience in crafting compelling visual stories. I specialize in YouTube content, commercial edits, music videos, and event highlights.</p>
+            <p class="text-gray-400 mb-4">My journey began with a passion for filmmaking and storytelling. I've since honed my skills in cutting-edge software to deliver high-quality, engaging videos that resonate with audiences. I believe every project is unique and deserves a tailor-made approach.</p>
+            <p class="text-gray-400 mb-6">Whether you need a punchy promo, a cinematic wedding film, or a consistent YouTube edit, I bring creativity, technical expertise, and a commitment to excellence. I'm currently available for freelance collaborations.</p>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="text-center p-4 rounded-xl bg-purple-900/30 border border-purple-500/20">
+                <div class="text-3xl font-bold text-purple-400">4+</div>
+                <div class="text-sm text-gray-500">Years Editing</div>
+              </div>
+              <div class="text-center p-4 rounded-xl bg-purple-900/30 border border-purple-500/20">
+                <div class="text-3xl font-bold text-purple-400">120+</div>
+                <div class="text-sm text-gray-500">Projects</div>
+              </div>
+              <div class="text-center p-4 rounded-xl bg-purple-900/30 border border-purple-500/20">
+                <div class="text-3xl font-bold text-purple-400">35+</div>
+                <div class="text-sm text-gray-500">Clients</div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/50 to-blue-900/50 border border-purple-500/20">
+              <div class="text-4xl mb-3">🎬</div>
+              <h3 class="font-bold mb-2">Premiere Pro</h3>
+              <p class="text-sm text-gray-400">Expert in timeline editing, multicam, and transitions</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/50 to-blue-900/50 border border-purple-500/20 mt-8">
+              <div class="text-4xl mb-3">🔮</div>
+              <h3 class="font-bold mb-2">After Effects</h3>
+              <p class="text-sm text-gray-400">Motion graphics, visual effects, and animations</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/50 to-blue-900/50 border border-purple-500/20">
+              <div class="text-4xl mb-3">🎨</div>
+              <h3 class="font-bold mb-2">DaVinci Resolve</h3>
+              <p class="text-sm text-gray-400">Color grading and professional finishing</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/50 to-blue-900/50 border border-purple-500/20 mt-8">
+              <div class="text-4xl mb-3">🎵</div>
+              <h3 class="font-bold mb-2">Audio & Mixing</h3>
+              <p class="text-sm text-gray-400">Clean sound design and audio sweetening</p>
+            </div>
+          </div>
         </div>
-       </div>
       </div>
-     </div>
-     
-     <!-- CTA Section -->
-     <div class="text-center py-20 rounded-3xl bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 fade-section">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Brand?</h2>
-      <p class="text-xl text-gray-400 mb-4">Let's create something amazing together</p>
-      <p class="text-gray-500 mb-8">Get your free consultation today — no commitment required</p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="#" data-page="contact" class="inline-block px-10 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl font-bold text-lg transition-all">Get Started Now →</a>
-        <a href="https://wa.me/9779807007817?text=Hi%20Gracelight%20Creations!%20I%20want%20to%20learn%20more%20about%20your%20services" target="_blank" class="inline-block px-10 py-4 bg-gradient-to-r from-[#25D366] to-green-500 rounded-xl font-bold text-lg transition-all flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.371-.025-.521-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.012-.57-.012-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.677-.236-.375a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.158 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.89-11.893 0-3.18-1.24-6.162-3.495-8.411"/>
-          </svg>
-          Chat on WhatsApp
-        </a>
-      </div>
-     </div>
-    </div>
-   </section>
+    </section>
 
-   <!-- ========== ABOUT PAGE (COMPLETE) ========== -->
-   <section id="about" class="page-section pt-24">
-    <div class="max-w-7xl mx-auto px-6 py-20">
-     <div class="text-center max-w-3xl mx-auto mb-16 fade-section">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">About <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Gracelight</span></h1>
-      <p class="text-xl text-gray-400">We're more than just a marketing agency — we're your growth partner</p>
-     </div>
-     <div class="grid lg:grid-cols-2 gap-12 mb-20 fade-section">
-      <div>
-       <h2 class="text-3xl font-bold mb-6">Our Story</h2>
-       <p class="text-gray-400 text-lg mb-4">Born from a passion for creativity and growth, Gracelight Creations has been transforming businesses into powerful digital brands since our inception. We believe every business has a unique story worth telling—and we're here to tell it beautifully.</p>
-       <p class="text-gray-400 mb-4">What started as a small team of creative minds has grown into a full-service digital marketing agency trusted by over 150+ clients across multiple industries. From local cafes to educational institutions, healthcare providers to e-commerce brands, we've helped businesses of all sizes achieve remarkable growth.</p>
-       <p class="text-gray-400 mb-6">Our journey has been driven by one simple principle: deliver exceptional results that exceed expectations. We don't just create content; we craft experiences that resonate with your audience and drive meaningful engagement.</p>
-       <div class="grid grid-cols-3 gap-4">
-        <div class="text-center p-4 rounded-xl bg-purple-900/30 border border-purple-500/20">
-         <div class="text-3xl font-bold text-purple-400">150+</div>
-         <div class="text-sm text-gray-500">Happy Clients</div>
+    <!-- ========== SERVICES PAGE ========== (only video services) -->
+    <section id="services" class="page-section pt-24">
+      <div class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center max-w-3xl mx-auto mb-16 fade-section">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">My <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Services</span></h1>
+          <p class="text-xl text-gray-400">Professional video editing tailored to your needs</p>
         </div>
-        <div class="text-center p-4 rounded-xl bg-purple-900/30 border border-purple-500/20">
-         <div class="text-3xl font-bold text-purple-400">500+</div>
-         <div class="text-sm text-gray-500">Projects Done</div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 fade-section">
+          <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-blue-900 flex items-center justify-center mb-6"><span class="text-2xl">🎬</span></div>
+            <h3 class="text-xl font-bold mb-3">YouTube Editing</h3>
+            <p class="text-gray-400 mb-4">Complete editing for YouTube videos: vlogs, tutorials, gaming, and more.</p>
+            <ul class="space-y-2 text-sm text-gray-500">
+              <li>✓ Engaging intros/outros</li>
+              <li>✓ Dynamic transitions</li>
+              <li>✓ End screens & cards</li>
+            </ul>
+          </div>
+          <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-blue-900 flex items-center justify-center mb-6"><span class="text-2xl">📹</span></div>
+            <h3 class="text-xl font-bold mb-3">Commercial & Ads</h3>
+            <p class="text-gray-400 mb-4">High-impact promotional videos for brands and products.</p>
+            <ul class="space-y-2 text-sm text-gray-500">
+              <li>✓ TV & social media ads</li>
+              <li>✓ Product promos</li>
+              <li>✓ Testimonials</li>
+            </ul>
+          </div>
+          <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-blue-900 flex items-center justify-center mb-6"><span class="text-2xl">🎥</span></div>
+            <h3 class="text-xl font-bold mb-3">Music Videos</h3>
+            <p class="text-gray-400 mb-4">Creative editing, color grading, and effects for music artists.</p>
+            <ul class="space-y-2 text-sm text-gray-500">
+              <li>✓ Beat-synced cuts</li>
+              <li>✓ Visual effects</li>
+              <li>✓ Lyric videos</li>
+            </ul>
+          </div>
+          <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-blue-900 flex items-center justify-center mb-6"><span class="text-2xl">💒</span></div>
+            <h3 class="text-xl font-bold mb-3">Wedding & Events</h3>
+            <p class="text-gray-400 mb-4">Cinematic wedding films, aftermovies, and event highlights.</p>
+            <ul class="space-y-2 text-sm text-gray-500">
+              <li>✓ Highlight reels</li>
+              <li>✓ Full ceremony edits</li>
+              <li>✓ Drone footage integration</li>
+            </ul>
+          </div>
+          <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-blue-900 flex items-center justify-center mb-6"><span class="text-2xl">📱</span></div>
+            <h3 class="text-xl font-bold mb-3">Social Media Clips</h3>
+            <p class="text-gray-400 mb-4">Short, engaging videos for Instagram Reels, TikTok, and Shorts.</p>
+            <ul class="space-y-2 text-sm text-gray-500">
+              <li>✓ Vertical format</li>
+              <li>✓ Captions & graphics</li>
+              <li>✓ Trending effects</li>
+            </ul>
+          </div>
         </div>
-        <div class="text-center p-4 rounded-xl bg-purple-900/30 border border-purple-500/20">
-         <div class="text-3xl font-bold text-purple-400">98%</div>
-         <div class="text-sm text-gray-500">Client Retention</div>
-        </div>
-       </div>
       </div>
-      <div class="grid grid-cols-2 gap-4">
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 border border-purple-500/20">
-        <div class="text-4xl mb-3">🎨</div>
-        <h3 class="font-bold mb-2">Creative Excellence</h3>
-        <p class="text-sm text-gray-400">Award-winning designs that capture attention</p>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 border border-purple-500/20 mt-8">
-        <div class="text-4xl mb-3">📊</div>
-        <h3 class="font-bold mb-2">Data-Driven</h3>
-        <p class="text-sm text-gray-400">Results backed by analytics</p>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 border border-purple-500/20">
-        <div class="text-4xl mb-3">⚡</div>
-        <h3 class="font-bold mb-2">Fast Delivery</h3>
-        <p class="text-sm text-gray-400">Quick turnaround without compromise</p>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 border border-purple-500/20 mt-8">
-        <div class="text-4xl mb-3">🤝</div>
-        <h3 class="font-bold mb-2">Dedicated Support</h3>
-        <p class="text-sm text-gray-400">24/7 support whenever needed</p>
-       </div>
-      </div>
-     </div>
-     <div class="grid md:grid-cols-2 gap-8 mb-20 fade-section">
-      <div class="p-10 rounded-3xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 border border-purple-500/30">
-       <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
-       <p class="text-gray-400 mb-4">To empower businesses with creative digital marketing solutions that drive real growth. We combine artistic excellence with data-driven strategies to help our clients dominate their markets.</p>
-       <p class="text-gray-400">We're committed to making high-quality digital marketing accessible to businesses of all sizes, helping them compete effectively in an increasingly digital world.</p>
-      </div>
-      <div class="p-10 rounded-3xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 border border-purple-500/30">
-       <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
-       <p class="text-gray-400 mb-4">To become the most trusted digital marketing partner for businesses worldwide. We envision a future where every business has access to world-class marketing that helps them thrive.</p>
-       <p class="text-gray-400">Through innovation, creativity, and unwavering commitment to excellence, we aim to set new standards in the digital marketing industry.</p>
-      </div>
-     </div>
-     
-     <!-- Our Values -->
-     <div class="mb-20 fade-section">
-      <h2 class="text-3xl font-bold text-center mb-12">Our Core Values</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-       <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 text-center">
-        <div class="text-5xl mb-4">💡</div>
-        <h4 class="text-xl font-bold mb-3">Innovation</h4>
-        <p class="text-gray-400 text-sm">We constantly push boundaries and explore new creative approaches to stay ahead of trends.</p>
-       </div>
-       <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 text-center">
-        <div class="text-5xl mb-4">⭐</div>
-        <h4 class="text-xl font-bold mb-3">Excellence</h4>
-        <p class="text-gray-400 text-sm">We deliver nothing but the highest quality work that exceeds client expectations.</p>
-       </div>
-       <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 text-center">
-        <div class="text-5xl mb-4">🤝</div>
-        <h4 class="text-xl font-bold mb-3">Integrity</h4>
-        <p class="text-gray-400 text-sm">Transparent communication and honest partnerships built on trust and respect.</p>
-       </div>
-       <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 text-center">
-        <div class="text-5xl mb-4">📈</div>
-        <h4 class="text-xl font-bold mb-3">Growth</h4>
-        <p class="text-gray-400 text-sm">We measure our success by the growth and success of our clients' businesses.</p>
-       </div>
-      </div>
-     </div>
-     
-     <!-- Our Team -->
-     <div class="mb-20 fade-section">
-      <div class="text-center mb-12">
-       <h2 class="text-3xl font-bold mb-4">Meet Our Expert Team</h2>
-       <p class="text-gray-400">Talented professionals dedicated to your success</p>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 text-center hover:scale-105 transition-all">
-        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4 text-3xl font-bold">AS</div>
-        <h4 class="font-bold text-lg mb-1">Arjun Sharma</h4>
-        <p class="text-purple-400 text-sm mb-3">Creative Director</p>
-        <p class="text-gray-400 text-sm">10+ years creating compelling brand stories</p>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 text-center hover:scale-105 transition-all">
-        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4 text-3xl font-bold">NP</div>
-        <h4 class="font-bold text-lg mb-1">Neha Patel</h4>
-        <p class="text-blue-400 text-sm mb-3">Social Media Strategist</p>
-        <p class="text-gray-400 text-sm">Expert in viral content and engagement</p>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 text-center hover:scale-105 transition-all">
-        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4 text-3xl font-bold">RK</div>
-        <h4 class="font-bold text-lg mb-1">Rahul Kumar</h4>
-        <p class="text-green-400 text-sm mb-3">Video Production Lead</p>
-        <p class="text-gray-400 text-sm">Award-winning video editor and producer</p>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 text-center hover:scale-105 transition-all">
-        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mx-auto mb-4 text-3xl font-bold">PD</div>
-        <h4 class="font-bold text-lg mb-1">Priya Desai</h4>
-        <p class="text-orange-400 text-sm mb-3">Web Developer</p>
-        <p class="text-gray-400 text-sm">Building beautiful, high-converting websites</p>
-       </div>
-      </div>
-     </div>
-     
-     <!-- Our Approach -->
-     <div class="mb-20 p-12 rounded-3xl bg-gradient-to-br from-purple-900/40 to-pink-900/40 border border-purple-500/30 fade-section">
-      <h2 class="text-3xl font-bold text-center mb-12">Our Approach to Success</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-       <div>
-        <div class="text-4xl mb-4">🎯</div>
-        <h4 class="text-xl font-bold mb-3">Strategy First</h4>
-        <p class="text-gray-400">Every campaign starts with deep research and strategic planning. We analyze your market, competitors, and audience to create a winning strategy.</p>
-       </div>
-       <div>
-        <div class="text-4xl mb-4">🎨</div>
-        <h4 class="text-xl font-bold mb-3">Creative Execution</h4>
-        <p class="text-gray-400">Our talented team brings strategies to life with stunning visuals, compelling copy, and engaging content that resonates with your audience.</p>
-       </div>
-       <div>
-        <div class="text-4xl mb-4">📊</div>
-        <h4 class="text-xl font-bold mb-3">Continuous Optimization</h4>
-        <p class="text-gray-400">We monitor performance metrics closely, testing and refining campaigns to maximize ROI and ensure sustained growth.</p>
-       </div>
-      </div>
-     </div>
-     
-     <!-- Achievements -->
-     <div class="text-center fade-section">
-      <h2 class="text-3xl font-bold mb-12">Our Achievements</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-        <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">5M+</div>
-        <div class="text-sm text-gray-400">Total Reach Generated</div>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-        <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">15+</div>
-        <div class="text-sm text-gray-400">Industry Awards</div>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-        <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">100%</div>
-        <div class="text-sm text-gray-400">Client Satisfaction</div>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-        <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">24/7</div>
-        <div class="text-sm text-gray-400">Dedicated Support</div>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-        <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">48h</div>
-        <div class="text-sm text-gray-400">Average Response Time</div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
+    </section>
 
-   <!-- ========== SERVICES PAGE (COMPLETE) ========== -->
-   <section id="services" class="page-section pt-24">
-    <div class="max-w-7xl mx-auto px-6 py-20">
-     <div class="text-center max-w-3xl mx-auto mb-16 fade-section">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">Our <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span></h1>
-      <p class="text-xl text-gray-400">Everything you need to grow online</p>
-     </div>
-     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 fade-section">
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all">
-       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6"><span class="text-2xl">📱</span></div>
-       <h3 class="text-xl font-bold mb-3">Social Media Management</h3>
-       <p class="text-gray-400 mb-4">Complete social media strategy, content creation, and community management</p>
-       <ul class="space-y-2 text-sm text-gray-500">
-        <li>✓ Content Calendar Planning</li>
-        <li>✓ Engagement & Community Building</li>
-        <li>✓ Monthly Analytics Reports</li>
-       </ul>
+    <!-- ========== PORTFOLIO PAGE ========== (only video projects) -->
+    <section id="portfolio" class="page-section pt-24">
+      <div class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center max-w-3xl mx-auto mb-16 fade-section">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">My <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Portfolio</span></h1>
+          <p class="text-xl text-gray-400">A selection of recent video projects</p>
+        </div>
+        
+        <!-- Filter Tabs (only video categories) -->
+        <div class="flex flex-wrap justify-center gap-4 mb-10 fade-section">
+          <button data-filter="all" class="filter-tab active px-5 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 font-medium hover:bg-purple-500/30 transition-all">All</button>
+          <button data-filter="youtube" class="filter-tab px-5 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 font-medium hover:bg-purple-500/30 transition-all">YouTube</button>
+          <button data-filter="commercial" class="filter-tab px-5 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 font-medium hover:bg-purple-500/30 transition-all">Commercial</button>
+          <button data-filter="music" class="filter-tab px-5 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 font-medium hover:bg-purple-500/30 transition-all">Music</button>
+          <button data-filter="events" class="filter-tab px-5 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 font-medium hover:bg-purple-500/30 transition-all">Events</button>
+        </div>
+        
+        <!-- Projects Grid (all video projects) -->
+        <div id="filterable-projects" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 fade-section">
+          <!-- YouTube -->
+          <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="youtube">
+            <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-blue-900/50 flex items-center justify-center mb-4">
+              <span class="text-6xl">🎬</span>
+            </div>
+            <h4 class="font-bold text-lg mb-2">Travel Vlog: Thailand</h4>
+            <p class="text-sm text-gray-400 mb-3">Cinematic travel vlog with color grading and motion graphics</p>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-purple-400">YouTube</span>
+              <div class="flex gap-2">
+                <a href="https://youtu.be/RIkAM3Q3juc?si=o9U4bmWndN50LtIM" target="_blank" class="px-3 py-1.5 bg-purple-500/30 border border-purple-500/50 rounded-lg text-xs font-semibold hover:bg-purple-500/50 transition-all">Watch →</a>
+                <button data-project-id="vid1" class="details-btn px-3 py-1.5 bg-gradient-to-r from-purple-600 to-blue-900 rounded-lg text-xs font-semibold">Details →</button>
+              </div>
+            </div>
+          </div>
+          <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="youtube">
+            <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-blue-900/50 flex items-center justify-center mb-4">
+              <span class="text-6xl">🎮</span>
+            </div>
+            <h4 class="font-bold text-lg mb-2">Gaming Montage</h4>
+            <p class="text-sm text-gray-400 mb-3">High-energy gaming edit with effects and transitions</p>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-purple-400">YouTube</span>
+              <div class="flex gap-2">
+                <a href="https://youtu.be/cM-xrEdmCkc?si=T1wz8ROhqf6NzB5Z" target="_blank" class="px-3 py-1.5 bg-purple-500/30 border border-purple-500/50 rounded-lg text-xs font-semibold hover:bg-purple-500/50 transition-all">Watch →</a>
+                <button data-project-id="vid2" class="details-btn px-3 py-1.5 bg-gradient-to-r from-purple-600 to-blue-900 rounded-lg text-xs font-semibold">Details →</button>
+              </div>
+            </div>
+          </div>
+          <!-- Commercial -->
+          <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="commercial">
+            <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-blue-900/50 flex items-center justify-center mb-4">
+              <span class="text-6xl">📹</span>
+            </div>
+            <h4 class="font-bold text-lg mb-2">Product Promo: SmartWatch</h4>
+            <p class="text-sm text-gray-400 mb-3">30-second ad with dynamic pacing and product shots</p>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-purple-400">Commercial</span>
+              <div class="flex gap-2">
+                <a href="https://youtube.com/shorts/uuFZIqe7Dig?si=jV73xFfnLCe1oVPr" target="_blank" class="px-3 py-1.5 bg-purple-500/30 border border-purple-500/50 rounded-lg text-xs font-semibold hover:bg-purple-500/50 transition-all">Watch →</a>
+                <button data-project-id="vid3" class="details-btn px-3 py-1.5 bg-gradient-to-r from-purple-600 to-blue-900 rounded-lg text-xs font-semibold">Details →</button>
+              </div>
+            </div>
+          </div>
+          <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="commercial">
+            <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-blue-900/50 flex items-center justify-center mb-4">
+              <span class="text-6xl">🏢</span>
+            </div>
+            <h4 class="font-bold text-lg mb-2">Corporate Brand Video</h4>
+            <p class="text-sm text-gray-400 mb-3">Professional corporate story with interviews and b-roll</p>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-purple-400">Commercial</span>
+              <div class="flex gap-2">
+                <a href="https://youtube.com/shorts/E9NUZDLhZzQ?si=Xf4IfoNy6TGIIZo3" target="_blank" class="px-3 py-1.5 bg-purple-500/30 border border-purple-500/50 rounded-lg text-xs font-semibold hover:bg-purple-500/50 transition-all">Watch →</a>
+                <button data-project-id="vid4" class="details-btn px-3 py-1.5 bg-gradient-to-r from-purple-600 to-blue-900 rounded-lg text-xs font-semibold">Details →</button>
+              </div>
+            </div>
+          </div>
+          <!-- Music -->
+          <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="music">
+            <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-blue-900/50 flex items-center justify-center mb-4">
+              <span class="text-6xl">🎵</span>
+            </div>
+            <h4 class="font-bold text-lg mb-2">Indie Music Video</h4>
+            <p class="text-sm text-gray-400 mb-3">Artistic music video with color grading and visual effects</p>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-purple-400">Music</span>
+              <div class="flex gap-2">
+                <a href="https://youtube.com/shorts/D9O9G9WBBg0?si=3_qYwnarvJAyQXdI" target="_blank" class="px-3 py-1.5 bg-purple-500/30 border border-purple-500/50 rounded-lg text-xs font-semibold hover:bg-purple-500/50 transition-all">Watch →</a>
+                <button data-project-id="vid5" class="details-btn px-3 py-1.5 bg-gradient-to-r from-purple-600 to-blue-900 rounded-lg text-xs font-semibold">Details →</button>
+              </div>
+            </div>
+          </div>
+          <!-- Events -->
+          <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="events">
+            <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-blue-900/50 flex items-center justify-center mb-4">
+              <span class="text-6xl">💒</span>
+            </div>
+            <h4 class="font-bold text-lg mb-2">Wedding Highlights</h4>
+            <p class="text-sm text-gray-400 mb-3">Romantic wedding film with cinematic storytelling</p>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-purple-400">Events</span>
+              <div class="flex gap-2">
+                <a href="https://youtube.com/shorts/SS1ykwexz1I?si=51mMCir-jhKByOu8" target="_blank" class="px-3 py-1.5 bg-purple-500/30 border border-purple-500/50 rounded-lg text-xs font-semibold hover:bg-purple-500/50 transition-all">Watch →</a>
+                <button data-project-id="vid6" class="details-btn px-3 py-1.5 bg-gradient-to-r from-purple-600 to-blue-900 rounded-lg text-xs font-semibold">Details →</button>
+              </div>
+            </div>
+          </div>
+          <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="events">
+            <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-blue-900/50 flex items-center justify-center mb-4">
+              <span class="text-6xl">🎪</span>
+            </div>
+            <h4 class="font-bold text-lg mb-2">Music Festival Aftermovie</h4>
+            <p class="text-sm text-gray-400 mb-3">Energetic recap with fast cuts and crowd moments</p>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-purple-400">Events</span>
+              <div class="flex gap-2">
+                <a href="https://youtube.com/shorts/GrM66WA2WtU?si=XBB596yDwvwcXuv_" target="_blank" class="px-3 py-1.5 bg-purple-500/30 border border-purple-500/50 rounded-lg text-xs font-semibold hover:bg-purple-500/50 transition-all">Watch →</a>
+                <button data-project-id="vid7" class="details-btn px-3 py-1.5 bg-gradient-to-r from-purple-600 to-blue-900 rounded-lg text-xs font-semibold">Details →</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all">
-       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center mb-6"><span class="text-2xl">🎬</span></div>
-       <h3 class="text-xl font-bold mb-3">Video Editing & Reels</h3>
-       <p class="text-gray-400 mb-4">Professional video editing for reels, shorts, and promotional content</p>
-       <ul class="space-y-2 text-sm text-gray-500">
-        <li>✓ Instagram Reels & Stories</li>
-        <li>✓ YouTube Shorts & Videos</li>
-        <li>✓ Motion Graphics & Effects</li>
-       </ul>
-      </div>
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all">
-       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6"><span class="text-2xl">🎨</span></div>
-       <h3 class="text-xl font-bold mb-3">Graphic Design</h3>
-       <p class="text-gray-400 mb-4">Eye-catching graphics, thumbnails, and marketing materials</p>
-       <ul class="space-y-2 text-sm text-gray-500">
-        <li>✓ Social Media Graphics</li>
-        <li>✓ YouTube Thumbnails</li>
-        <li>✓ Brand Collateral</li>
-       </ul>
-      </div>
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all">
-       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-6"><span class="text-2xl">💻</span></div>
-       <h3 class="text-xl font-bold mb-3">Website Development</h3>
-       <p class="text-gray-400 mb-4">Modern, responsive websites that convert visitors</p>
-       <ul class="space-y-2 text-sm text-gray-500">
-        <li>✓ Custom Website Design</li>
-        <li>✓ Mobile Responsive</li>
-        <li>✓ SEO Optimized</li>
-       </ul>
-      </div>
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all">
-       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center mb-6"><span class="text-2xl">🎯</span></div>
-       <h3 class="text-xl font-bold mb-3">Branding & Strategy</h3>
-       <p class="text-gray-400 mb-4">Complete brand identity and marketing strategies</p>
-       <ul class="space-y-2 text-sm text-gray-500">
-        <li>✓ Logo & Identity Design</li>
-        <li>✓ Brand Guidelines</li>
-        <li>✓ Marketing Strategy</li>
-       </ul>
-      </div>
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all relative overflow-hidden">
-       <div class="absolute top-0 right-0 bg-gradient-to-l from-purple-500 to-pink-500 text-xs font-bold px-3 py-1 rounded-bl-xl">POPULAR</div>
-       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6"><span class="text-2xl">🚀</span></div>
-       <h3 class="text-xl font-bold mb-3">Complete Growth Package</h3>
-       <p class="text-gray-400 mb-4">All-in-one solution for business domination</p>
-       <ul class="space-y-2 text-sm text-gray-500">
-        <li>✓ All Services Included</li>
-        <li>✓ Priority Support 24/7</li>
-        <li>✓ Free Website Included</li>
-       </ul>
-      </div>
-     </div>
-    </div>
-   </section>
+    </section>
 
-   <!-- ========== PORTFOLIO PAGE (COMPLETE) ========== -->
-   <section id="portfolio" class="page-section pt-24">
-    <div class="max-w-7xl mx-auto px-6 py-20">
-     <div class="text-center max-w-3xl mx-auto mb-16 fade-section">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">Our <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Portfolio</span></h1>
-      <p class="text-xl text-gray-400">Creative work that has helped businesses grow</p>
-     </div>
-     
-     <!-- Original Portfolio Grid -->
-     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20 fade-section">
-      <div class="group rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600 to-pink-600 aspect-video flex items-center justify-center hover:scale-105 transition-all cursor-pointer">
-       <div class="text-center p-6">
-        <div class="text-5xl mb-4">📱</div>
-        <div class="font-bold text-xl">Social Media Campaign</div>
-        <div class="text-white/70">+340% Engagement</div>
-       </div>
+    <!-- ========== TESTIMONIALS PAGE ========== (updated to reflect video editing) -->
+    <section id="testimonials" class="page-section pt-24">
+      <div class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center max-w-3xl mx-auto mb-16 fade-section">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">Client <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Testimonials</span></h1>
+          <p class="text-xl text-gray-400">What clients say about my video editing</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 fade-section">
+          <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
+            <div class="flex gap-1 mb-4 text-yellow-400">★★★★★</div>
+            <p class="text-gray-300 mb-6">"Sujal edited our corporate video and the result was beyond expectations. He understood our brand and delivered a polished, professional piece. Highly recommended!"</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-blue-900 flex items-center justify-center font-bold">RK</div>
+              <div><div class="font-semibold">Ravi K.</div><div class="text-sm text-gray-500">Marketing Manager, TechCorp</div></div>
+            </div>
+          </div>
+          <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
+            <div class="flex gap-1 mb-4 text-yellow-400">★★★★★</div>
+            <p class="text-gray-300 mb-6">"I hired Sujal for my YouTube channel and my views skyrocketed! His editing style is engaging and he always delivers ahead of time."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-blue-900 flex items-center justify-center font-bold">PS</div>
+              <div><div class="font-semibold">Priya S.</div><div class="text-sm text-gray-500">Travel Vlogger</div></div>
+            </div>
+          </div>
+          <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
+            <div class="flex gap-1 mb-4 text-yellow-400">★★★★★</div>
+            <p class="text-gray-300 mb-6">"The wedding highlight video Sujal created for us is absolutely stunning. He captured all the emotions perfectly. Thank you for preserving our memories so beautifully."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-blue-900 flex items-center justify-center font-bold">AJ</div>
+              <div><div class="font-semibold">Anjali & Jay</div><div class="text-sm text-gray-500">Happy Couple</div></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="group rounded-2xl overflow-hidden bg-gradient-to-br from-blue-600 to-cyan-600 aspect-video flex items-center justify-center hover:scale-105 transition-all cursor-pointer">
-       <div class="text-center p-6">
-        <div class="text-5xl mb-4">🎬</div>
-        <div class="font-bold text-xl">Video Production</div>
-        <div class="text-white/70">50K+ Views</div>
-       </div>
-      </div>
-      <div class="group rounded-2xl overflow-hidden bg-gradient-to-br from-green-600 to-emerald-600 aspect-video flex items-center justify-center hover:scale-105 transition-all cursor-pointer">
-       <div class="text-center p-6">
-        <div class="text-5xl mb-4">💻</div>
-        <div class="font-bold text-xl">Website Design</div>
-        <div class="text-white/70">+180% Leads</div>
-       </div>
-      </div>
-      <div class="group rounded-2xl overflow-hidden bg-gradient-to-br from-orange-600 to-red-600 aspect-video flex items-center justify-center hover:scale-105 transition-all cursor-pointer">
-       <div class="text-center p-6">
-        <div class="text-5xl mb-4">🎨</div>
-        <div class="font-bold text-xl">Brand Identity</div>
-        <div class="text-white/70">Complete Rebrand</div>
-       </div>
-      </div>
-      <div class="group rounded-2xl overflow-hidden bg-gradient-to-br from-pink-600 to-purple-600 aspect-video flex items-center justify-center hover:scale-105 transition-all cursor-pointer">
-       <div class="text-center p-6">
-        <div class="text-5xl mb-4">📈</div>
-        <div class="font-bold text-xl">Growth Strategy</div>
-        <div class="text-white/70">2x Enrollment</div>
-       </div>
-      </div>
-      <div class="group rounded-2xl overflow-hidden bg-gradient-to-br from-yellow-600 to-orange-600 aspect-video flex items-center justify-center hover:scale-105 transition-all cursor-pointer">
-       <div class="text-center p-6">
-        <div class="text-5xl mb-4">🎯</div>
-        <div class="font-bold text-xl">Ad Campaigns</div>
-        <div class="text-white/70">5x ROAS</div>
-       </div>
-      </div>
-     </div>
+    </section>
 
-     <!-- ===== FILTERABLE FEATURED PROJECTS SECTION ===== -->
-     <div class="mb-20 fade-section">
-      <div class="text-center mb-12">
-       <h2 class="text-3xl font-bold mb-4">Featured Projects</h2>
-       <p class="text-gray-400">Detailed look at our latest work - click on categories to filter</p>
+    <!-- ========== PROJECT DETAIL PAGE ========== (updated data for video projects) -->
+    <section id="project-detail" class="page-section pt-24">
+      <div class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">Project <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent" id="project-title">Details</span></h1>
+          <p class="text-xl text-gray-400" id="project-category">Category</p>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <div class="p-10 rounded-3xl bg-gradient-to-br from-purple-900/50 to-blue-900/50 border border-purple-500/30 mb-8">
+            <div class="flex justify-center mb-8">
+              <div id="project-icon" class="text-8xl">🎬</div>
+            </div>
+            <h2 class="text-3xl font-bold mb-4 text-center" id="project-name">Project Name</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-8">
+              <div>
+                <h3 class="font-bold text-xl mb-3 text-purple-400">Client</h3>
+                <p class="text-gray-300" id="project-client">Client Name</p>
+                <h3 class="font-bold text-xl mb-3 mt-6 text-purple-400">Objective</h3>
+                <p class="text-gray-300" id="project-objective">Project goal</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl mb-3 text-purple-400">Results</h3>
+                <p class="text-gray-300" id="project-results">Key outcomes</p>
+                <h3 class="font-bold text-xl mb-3 mt-6 text-purple-400">Tools Used</h3>
+                <p class="text-gray-300" id="project-tools">Tools</p>
+              </div>
+            </div>
+            <div class="mt-8 text-center">
+              <a href="#" data-page="portfolio" class="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-900 rounded-lg font-semibold transition-all mt-4">Back to Portfolio</a>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <!-- Filter Tabs -->
-      <div class="flex flex-wrap justify-center gap-4 mb-10">
-       <button data-filter="all" class="filter-tab active px-5 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 font-medium hover:bg-purple-500/30 transition-all">All</button>
-       <button data-filter="videos" class="filter-tab px-5 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 font-medium hover:bg-purple-500/30 transition-all">Videos (6)</button>
-       <button data-filter="websites" class="filter-tab px-5 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 font-medium hover:bg-purple-500/30 transition-all">Websites (4)</button>
-       <button data-filter="graphics" class="filter-tab px-5 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 font-medium hover:bg-purple-500/30 transition-all">Graphics (10)</button>
-       <button data-filter="logos" class="filter-tab px-5 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 font-medium hover:bg-purple-500/30 transition-all">Logos (4)</button>
-      </div>
-      
-      <!-- Projects Grid - All items with external links -->
-      <div id="filterable-projects" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <!-- 6 VIDEOS -->
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="videos">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-pink-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">🎬</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Brand Story Reel</h4>
-         <p class="text-sm text-gray-400 mb-3">60-second cinematic video for a lifestyle brand</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-purple-400">
-            Videos
-            <a href="https://youtube.com/shorts/uuFZIqe7Dig?si=AiIdeuFkXURv6IJg" target="_blank" class="ml-1 text-white hover:text-purple-300 transition-colors" title="Watch on YouTube">🔗</a>
-          </span>
-          <button data-project-id="video1" class="details-btn px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="videos">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-pink-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">🎥</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Product Launch Reel</h4>
-         <p class="text-sm text-gray-400 mb-3">Viral 30-second teaser for tech product</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-purple-400">
-            Videos
-            <a href="https://youtube.com/shorts/E9NUZDLhZzQ?si=RPrwUicmoIz_E7eg" target="_blank" class="ml-1 text-white hover:text-purple-300 transition-colors" title="Watch on YouTube">🔗</a>
-          </span>
-          <button data-project-id="video2" class="details-btn px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="videos">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-pink-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">🎞️</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Customer Testimonial</h4>
-         <p class="text-sm text-gray-400 mb-3">Heartfelt story featuring real clients</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-purple-400">
-            Videos
-            <a href="https://youtube.com/shorts/D9O9G9WBBg0?si=T2SCthisjyZ0Qd7a" target="_blank" class="ml-1 text-white hover:text-purple-300 transition-colors" title="Watch on YouTube">🔗</a>
-          </span>
-          <button data-project-id="video3" class="details-btn px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="videos">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-pink-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">📹</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Event Highlights</h4>
-         <p class="text-sm text-gray-400 mb-3">Annual conference recap video</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-purple-400">
-            Videos
-            <a href="https://youtube.com/shorts/SS1ykwexz1I?si=i3vevfC9XbMNVoVc" target="_blank" class="ml-1 text-white hover:text-purple-300 transition-colors" title="Watch on YouTube">🔗</a>
-          </span>
-          <button data-project-id="video4" class="details-btn px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="videos">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-pink-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">📽️</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Behind the Scenes</h4>
-         <p class="text-sm text-gray-400 mb-3">Authentic look at our creative process</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-purple-400">
-            Videos
-            <a href="https://youtube.com/shorts/GrM66WA2WtU?si=fL-7-vAglscMxszEs" target="_blank" class="ml-1 text-white hover:text-purple-300 transition-colors" title="Watch on YouTube">🔗</a>
-          </span>
-          <button data-project-id="video5" class="details-btn px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="videos">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-purple-600/50 to-pink-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">🎦</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Animation Explainer</h4>
-         <p class="text-sm text-gray-400 mb-3">2D animated explainer for SaaS startup</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-purple-400">
-            Videos
-            <a href="https://youtu.be/RIkAM3Q3juc?si=eoqrxAjOeIIwCDjb" target="_blank" class="ml-1 text-white hover:text-purple-300 transition-colors" title="Watch on YouTube">🔗</a>
-          </span>
-          <button data-project-id="video6" class="details-btn px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
+    </section>
 
+    <!-- ========== CONTACT PAGE ========== (updated name and phone) -->
+    <section id="contact" class="page-section pt-24">
+      <div class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center max-w-3xl mx-auto mb-16 fade-section">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">Get in <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Touch</span></h1>
+          <p class="text-xl text-gray-400">Let's discuss your video project and create something amazing together</p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12 fade-section">
+          <div>
+            <h2 class="text-3xl font-bold mb-8">Let's Talk About Your Video</h2>
+            <p class="text-gray-400 text-lg mb-8">Whether you need a YouTube edit, a commercial, or a wedding film, I'm here to help. Reach out and let's bring your vision to life.</p>
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-xl bg-purple-900/50 border border-purple-500/30 flex items-center justify-center flex-shrink-0"><span class="text-2xl">📧</span></div>
+                <div><div class="text-sm text-gray-500">Email</div><div id="contact-email" class="font-semibold text-lg">sujal.dhakal.video@gmail.com</div></div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-xl bg-purple-900/50 border border-purple-500/30 flex items-center justify-center flex-shrink-0"><span class="text-2xl">📱</span></div>
+                <div><div class="text-sm text-gray-500">Phone / WhatsApp</div><div id="contact-phone" class="font-semibold text-lg">+977 980-7007817</div></div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-xl bg-purple-900/50 border border-purple-500/30 flex items-center justify-center flex-shrink-0"><span class="text-2xl">⏱️</span></div>
+                <div><div class="text-sm text-gray-500">Response time</div><div class="font-semibold text-lg">Within 24 hours</div></div>
+              </div>
+              <div class="mt-8 p-6 rounded-2xl bg-gradient-to-br from-[#25D366]/10 to-green-500/10 border border-[#25D366]/20">
+                <h3 class="font-bold mb-3 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.371-.025-.521-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.012-.57-.012-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.677-.236-.375a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.158 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.89-11.893 0-3.18-1.24-6.162-3.495-8.411"/></svg>
+                  WhatsApp
+                </h3>
+                <p class="text-gray-400 text-sm mb-4">Quick replies on WhatsApp</p>
+                <a href="https://wa.me/9779807007817?text=Hi%20Sujal!%20I'm%20interested%20in%20your%20video%20editing%20services" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-[#25D366] text-white rounded-lg hover:bg-green-600 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.371-.025-.521-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.012-.57-.012-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.677-.236-.375a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.158 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.89-11.893 0-3.18-1.24-6.162-3.495-8.411"/></svg>
+                  Message me
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20">
+            <form id="contact-form" class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div><label for="name" class="block text-sm font-medium mb-2">Full Name *</label><input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-purple-500/30 text-white placeholder-gray-500 transition-all"></div>
+                <div><label for="email" class="block text-sm font-medium mb-2">Email *</label><input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-purple-500/30 text-white placeholder-gray-500 transition-all"></div>
+              </div>
+              <div><label for="phone" class="block text-sm font-medium mb-2">Phone</label><input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-purple-500/30 text-white placeholder-gray-500 transition-all"></div>
+              <div><label for="service" class="block text-sm font-medium mb-2">Service Interested In *</label>
+                <select id="service" name="service" required class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-purple-500/30 text-white transition-all">
+                  <option value="" class="bg-slate-900">Select a service</option>
+                  <option value="youtube" class="bg-slate-900">YouTube Editing</option>
+                  <option value="commercial" class="bg-slate-900">Commercial / Promo</option>
+                  <option value="music" class="bg-slate-900">Music Video</option>
+                  <option value="events" class="bg-slate-900">Wedding / Events</option>
+                  <option value="social" class="bg-slate-900">Social Media Clips</option>
+                </select>
+              </div>
+              <div><label for="message" class="block text-sm font-medium mb-2">Message *</label><textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-purple-500/30 text-white placeholder-gray-500 transition-all resize-none"></textarea></div>
+              <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-900 rounded-xl font-bold text-lg transition-all">Send Message →</button>
+              <div id="form-success" class="hidden text-center p-4 rounded-xl bg-green-500/20 border border-green-500/50"><p class="text-green-400 font-semibold">✓ Message sent! I'll reply within 24 hours.</p></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- 4 WEBSITES -->
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="websites">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-blue-600/50 to-cyan-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">💻</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">E-Commerce Store</h4>
-         <p class="text-sm text-gray-400 mb-3">Modern Shopify store for handmade crafts</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-blue-400">
-            Website
-            <a href="https://shopify.github.io/dawn/" target="_blank" class="ml-1 text-white hover:text-blue-300 transition-colors" title="Visit website">🔗</a>
-          </span>
-          <button data-project-id="website1" class="details-btn px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
+    <!-- Footer (updated) -->
+    <footer class="py-12 border-t border-purple-500/20">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-blue-900 flex items-center justify-center font-bold"><span class="text-white">SD</span></div>
+          <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Sujal Dhakal</span>
         </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="websites">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-blue-600/50 to-cyan-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">🌐</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Corporate Website</h4>
-         <p class="text-sm text-gray-400 mb-3">Clean, professional site for consultancy</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-blue-400">
-            Website
-            <a href="https://webflow.com/made-in-webflow/hello" target="_blank" class="ml-1 text-white hover:text-blue-300 transition-colors" title="Visit website">🔗</a>
-          </span>
-          <button data-project-id="website2" class="details-btn px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
+        <p class="text-gray-400 mb-6">Professional Video Editor</p>
+        <div class="flex justify-center gap-4 mb-6">
+          <a href="https://wa.me/9779807007817" target="_blank" class="p-2 rounded-full bg-slate-800 hover:bg-slate-700 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.371-.025-.521-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.012-.57-.012-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.677-.236-.375a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.158 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.89-11.893 0-3.18-1.24-6.162-3.495-8.411"/></svg>
+          </a>
+          <a href="mailto:sujal.dhakal.video@gmail.com" class="p-2 rounded-full bg-slate-800 hover:bg-slate-700 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+          </a>
+          <a href="tel:+9779807007817" class="p-2 rounded-full bg-slate-800 hover:bg-slate-700 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.5-5.2-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1h-4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-4c0-.6-.4-1-1-1zm-2-9h2c0 4.4-3.6 8-8 8v-2c3.3 0 6-2.7 6-6zm-4 0h2c0 2.8-2.2 5-5 5v-2c1.7 0 3-1.3 3-3z"/></svg>
+          </a>
         </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="websites">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-blue-600/50 to-cyan-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">📱</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Restaurant Landing</h4>
-         <p class="text-sm text-gray-400 mb-3">Mobile-first design with online ordering</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-blue-400">
-            Website
-            <a href="https://www.wix.com/website-template/view/html/2001" target="_blank" class="ml-1 text-white hover:text-blue-300 transition-colors" title="Visit website">🔗</a>
-          </span>
-          <button data-project-id="website3" class="details-btn px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="websites">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-blue-600/50 to-cyan-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">⚙️</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Portfolio Showcase</h4>
-         <p class="text-sm text-gray-400 mb-3">Minimalist portfolio for photographer</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-blue-400">
-            Website
-            <a href="https://www.squarespace.com/templates/wells" target="_blank" class="ml-1 text-white hover:text-blue-300 transition-colors" title="Visit website">🔗</a>
-          </span>
-          <button data-project-id="website4" class="details-btn px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-
-        <!-- 10 GRAPHICS -->
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="graphics">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-green-600/50 to-emerald-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">🎨</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Social Media Kit</h4>
-         <p class="text-sm text-gray-400 mb-3">Complete IG/FB templates for a cafe</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-green-400">
-            Graphic
-            <a href="https://www.behance.net/gallery/12345678/Social-Media-Kit" target="_blank" class="ml-1 text-white hover:text-green-300 transition-colors" title="View design">🔗</a>
-          </span>
-          <button data-project-id="graphic1" class="details-btn px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="graphics">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-green-600/50 to-emerald-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">🖼️</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Instagram Templates</h4>
-         <p class="text-sm text-gray-400 mb-3">10+ story and post designs</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-green-400">
-            Graphic
-            <a href="https://dribbble.com/shots/1234567-Instagram-Templates" target="_blank" class="ml-1 text-white hover:text-green-300 transition-colors" title="View design">🔗</a>
-          </span>
-          <button data-project-id="graphic2" class="details-btn px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="graphics">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-green-600/50 to-emerald-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">📊</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Infographic</h4>
-         <p class="text-sm text-gray-400 mb-3">Data visualization for annual report</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-green-400">
-            Graphic
-            <a href="https://www.behance.net/gallery/87654321/Infographic-Design" target="_blank" class="ml-1 text-white hover:text-green-300 transition-colors" title="View design">🔗</a>
-          </span>
-          <button data-project-id="graphic3" class="details-btn px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="graphics">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-green-600/50 to-emerald-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">📰</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Newsletter Design</h4>
-         <p class="text-sm text-gray-400 mb-3">Email template for marketing agency</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-green-400">
-            Graphic
-            <a href="https://dribbble.com/shots/9876543-Newsletter-Template" target="_blank" class="ml-1 text-white hover:text-green-300 transition-colors" title="View design">🔗</a>
-          </span>
-          <button data-project-id="graphic4" class="details-btn px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="graphics">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-green-600/50 to-emerald-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">📌</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Poster Series</h4>
-         <p class="text-sm text-gray-400 mb-3">Event posters for music festival</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-green-400">
-            Graphic
-            <a href="https://www.behance.net/gallery/11223344/Poster-Series" target="_blank" class="ml-1 text-white hover:text-green-300 transition-colors" title="View design">🔗</a>
-          </span>
-          <button data-project-id="graphic5" class="details-btn px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="graphics">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-green-600/50 to-emerald-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">📇</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Business Cards</h4>
-         <p class="text-sm text-gray-400 mb-3">Modern, minimal business card set</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-green-400">
-            Graphic
-            <a href="https://dribbble.com/shots/5543210-Business-Card-Design" target="_blank" class="ml-1 text-white hover:text-green-300 transition-colors" title="View design">🔗</a>
-          </span>
-          <button data-project-id="graphic6" class="details-btn px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="graphics">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-green-600/50 to-emerald-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">📁</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Brochure</h4>
-         <p class="text-sm text-gray-400 mb-3">Tri-fold brochure for travel agency</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-green-400">
-            Graphic
-            <a href="https://www.behance.net/gallery/99887766/Brochure-Design" target="_blank" class="ml-1 text-white hover:text-green-300 transition-colors" title="View design">🔗</a>
-          </span>
-          <button data-project-id="graphic7" class="details-btn px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="graphics">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-green-600/50 to-emerald-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">📦</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Packaging Design</h4>
-         <p class="text-sm text-gray-400 mb-3">Eco-friendly box for organic snacks</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-green-400">
-            Graphic
-            <a href="https://dribbble.com/shots/6655443/Packaging-Design" target="_blank" class="ml-1 text-white hover:text-green-300 transition-colors" title="View design">🔗</a>
-          </span>
-          <button data-project-id="graphic8" class="details-btn px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="graphics">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-green-600/50 to-emerald-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">📋</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Menu Design</h4>
-         <p class="text-sm text-gray-400 mb-3">Elegant menu for fine dining</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-green-400">
-            Graphic
-            <a href="https://www.behance.net/gallery/33221144/Menu-Design" target="_blank" class="ml-1 text-white hover:text-green-300 transition-colors" title="View design">🔗</a>
-          </span>
-          <button data-project-id="graphic9" class="details-btn px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="graphics">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-green-600/50 to-emerald-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">📒</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Ebook Cover</h4>
-         <p class="text-sm text-gray-400 mb-3">Cover design for digital marketing guide</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-green-400">
-            Graphic
-            <a href="https://dribbble.com/shots/11223344/Ebook-Cover" target="_blank" class="ml-1 text-white hover:text-green-300 transition-colors" title="View design">🔗</a>
-          </span>
-          <button data-project-id="graphic10" class="details-btn px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-
-        <!-- 4 LOGOS -->
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="logos">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-orange-600/50 to-red-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">🔤</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Logo & Brand Identity</h4>
-         <p class="text-sm text-gray-400 mb-3">Minimalist logo + brand guidelines</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-orange-400">
-            Logo
-            <a href="https://www.behance.net/gallery/12345678/Logo-Identity" target="_blank" class="ml-1 text-white hover:text-orange-300 transition-colors" title="View logo">🔗</a>
-          </span>
-          <button data-project-id="logo1" class="details-btn px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="logos">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-orange-600/50 to-red-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">🅰️</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Wordmark Logo</h4>
-         <p class="text-sm text-gray-400 mb-3">Custom typography for fashion brand</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-orange-400">
-            Logo
-            <a href="https://dribbble.com/shots/8765432/Wordmark-Logo" target="_blank" class="ml-1 text-white hover:text-orange-300 transition-colors" title="View logo">🔗</a>
-          </span>
-          <button data-project-id="logo2" class="details-btn px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="logos">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-orange-600/50 to-red-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">🦊</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Mascot Logo</h4>
-         <p class="text-sm text-gray-400 mb-3">Illustrated character for sports team</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-orange-400">
-            Logo
-            <a href="https://www.behance.net/gallery/55443322/Mascot-Logo" target="_blank" class="ml-1 text-white hover:text-orange-300 transition-colors" title="View logo">🔗</a>
-          </span>
-          <button data-project-id="logo3" class="details-btn px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
-        <div class="project-item group rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all" data-category="logos">
-         <div class="aspect-video rounded-lg bg-gradient-to-br from-orange-600/50 to-red-600/50 flex items-center justify-center mb-4">
-          <span class="text-6xl">🔷</span>
-         </div>
-         <h4 class="font-bold text-lg mb-2">Abstract Logo</h4>
-         <p class="text-sm text-gray-400 mb-3">Geometric mark for tech startup</p>
-         <div class="flex justify-between items-center">
-          <span class="text-xs text-orange-400">
-            Logo
-            <a href="https://dribbble.com/shots/9988776/Abstract-Logo" target="_blank" class="ml-1 text-white hover:text-orange-300 transition-colors" title="View logo">🔗</a>
-          </span>
-          <button data-project-id="logo4" class="details-btn px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg text-xs font-semibold">Details →</button>
-         </div>
-        </div>
+        <div class="text-sm text-gray-500">© 2025 Sujal Dhakal. All rights reserved.</div>
       </div>
-     </div>
-    </div>
-   </section>
-
-   <!-- ========== INDUSTRIES PAGE (COMPLETE) ========== -->
-   <section id="industries" class="page-section pt-24">
-    <div class="max-w-7xl mx-auto px-6 py-20">
-     <div class="text-center max-w-3xl mx-auto mb-16 fade-section">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">Industries We <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Serve</span></h1>
-      <p class="text-xl text-gray-400">Trusted across diverse sectors</p>
-     </div>
-     <div class="grid md:grid-cols-2 gap-8 fade-section">
-      <div class="p-10 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-       <div class="flex items-start gap-6">
-        <div class="text-5xl">🏥</div>
-        <div>
-         <h3 class="text-2xl font-bold mb-3">Hospitals & Healthcare</h3>
-         <p class="text-gray-400 mb-4">Build trust and connect with patients through compassionate digital marketing.</p>
-         <ul class="space-y-2 text-sm text-gray-500">
-          <li>✓ Patient education content</li>
-          <li>✓ Appointment booking campaigns</li>
-          <li>✓ Reputation management</li>
-         </ul>
-        </div>
-       </div>
-      </div>
-      <div class="p-10 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-       <div class="flex items-start gap-6">
-        <div class="text-5xl">🎓</div>
-        <div>
-         <h3 class="text-2xl font-bold mb-3">Schools & Colleges</h3>
-         <p class="text-gray-400 mb-4">Attract new students and engage with parents effectively.</p>
-         <ul class="space-y-2 text-sm text-gray-500">
-          <li>✓ Student enrollment campaigns</li>
-          <li>✓ Event promotion</li>
-          <li>✓ Alumni engagement</li>
-         </ul>
-        </div>
-       </div>
-      </div>
-      <div class="p-10 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-       <div class="flex items-start gap-6">
-        <div class="text-5xl">☕</div>
-        <div>
-         <h3 class="text-2xl font-bold mb-3">Cafes & Restaurants</h3>
-         <p class="text-gray-400 mb-4">Make your food business irresistible with mouth-watering content.</p>
-         <ul class="space-y-2 text-sm text-gray-500">
-          <li>✓ Food photography & reels</li>
-          <li>✓ Menu design</li>
-          <li>✓ Online ordering setup</li>
-         </ul>
-        </div>
-       </div>
-      </div>
-      <div class="p-10 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-       <div class="flex items-start gap-6">
-        <div class="text-5xl">💼</div>
-        <div>
-         <h3 class="text-2xl font-bold mb-3">Consultancies</h3>
-         <p class="text-gray-400 mb-4">Position yourself as an industry leader with professional branding.</p>
-         <ul class="space-y-2 text-sm text-gray-500">
-          <li>✓ LinkedIn strategy</li>
-          <li>✓ Thought leadership content</li>
-          <li>✓ Lead generation funnels</li>
-         </ul>
-        </div>
-       </div>
-      </div>
-      <div class="p-10 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-       <div class="flex items-start gap-6">
-        <div class="text-5xl">🏪</div>
-        <div>
-         <h3 class="text-2xl font-bold mb-3">Local Businesses</h3>
-         <p class="text-gray-400 mb-4">Dominate your local market with targeted campaigns.</p>
-         <ul class="space-y-2 text-sm text-gray-500">
-          <li>✓ Local SEO</li>
-          <li>✓ Google My Business</li>
-          <li>✓ Community engagement</li>
-         </ul>
-        </div>
-       </div>
-      </div>
-      <div class="p-10 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-       <div class="flex items-start gap-6">
-        <div class="text-5xl">🌐</div>
-        <div>
-         <h3 class="text-2xl font-bold mb-3">Online Businesses</h3>
-         <p class="text-gray-400 mb-4">Scale your e-commerce with performance marketing.</p>
-         <ul class="space-y-2 text-sm text-gray-500">
-          <li>✓ E-commerce marketing</li>
-          <li>✓ Conversion optimization</li>
-          <li>✓ Performance ads</li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-
-   <!-- ========== PRICING PAGE (FULLY RESTORED) ========== -->
-   <section id="pricing" class="page-section pt-24">
-    <div class="max-w-7xl mx-auto px-6 py-20">
-     <div class="text-center max-w-3xl mx-auto mb-16 fade-section">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">Simple <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Transparent Pricing</span></h1>
-      <p class="text-xl text-gray-400">Choose the perfect plan for your business growth</p>
-     </div>
-     
-     <!-- Pricing Cards -->
-     <div class="grid md:grid-cols-3 gap-8 mb-20 fade-section">
-      <!-- Basic Plan -->
-      <div class="p-8 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all">
-       <div class="text-center mb-8">
-        <div class="inline-block px-4 py-1 rounded-full bg-blue-500/20 border border-blue-500/40 text-blue-400 text-sm font-semibold mb-4">BASIC</div>
-        <div class="text-5xl font-bold mb-2">Rs 15,000</div>
-        <div class="text-gray-400">per month</div>
-       </div>
-       <div class="space-y-4 mb-8">
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">15 Social Media Posts</div><div class="text-sm text-gray-400">Instagram, Facebook & LinkedIn</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">5 Custom Graphics</div><div class="text-sm text-gray-400">Professional designs</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">Basic Analytics Report</div><div class="text-sm text-gray-400">Monthly performance insights</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">Content Calendar</div><div class="text-sm text-gray-400">Plan your content ahead</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">Email Support</div><div class="text-sm text-gray-400">Response within 24 hours</div></div></div>
-       </div>
-       <a href="#" data-page="contact" class="block w-full px-6 py-3 border border-purple-500/50 rounded-xl font-semibold text-center hover:bg-purple-500/10 transition-all">Get Started</a>
-       <div class="mt-6 text-center text-sm text-gray-500">Perfect for startups and small businesses</div>
-      </div>
-      <!-- Business Plan (Popular) -->
-      <div class="p-8 rounded-3xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-2 border-purple-500 relative hover:scale-105 transition-all">
-       <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-        <div class="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold">MOST POPULAR</div>
-       </div>
-       <div class="text-center mb-8 mt-4">
-        <div class="inline-block px-4 py-1 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-400 text-sm font-semibold mb-4">BUSINESS</div>
-        <div class="text-5xl font-bold mb-2">Rs 35,000</div>
-        <div class="text-gray-400">per month</div>
-       </div>
-       <div class="space-y-4 mb-8">
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">30 Social Media Posts</div><div class="text-sm text-gray-400">All major platforms</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">15 Custom Graphics</div><div class="text-sm text-gray-400">Premium designs</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">10 Reels/Videos</div><div class="text-sm text-gray-400">Professional video editing</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">Advanced Analytics</div><div class="text-sm text-gray-400">Detailed insights & reporting</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">Content Strategy</div><div class="text-sm text-gray-400">Customized growth plan</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">Community Management</div><div class="text-sm text-gray-400">Engage with your audience</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">Priority Support</div><div class="text-sm text-gray-400">Phone & email support</div></div></div>
-       </div>
-       <a href="#" data-page="contact" class="block w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl font-semibold text-center transition-all">Get Started</a>
-       <div class="mt-6 text-center text-sm text-gray-500">Ideal for growing businesses</div>
-      </div>
-      <!-- Growth Plan -->
-      <div class="p-8 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 hover:scale-105 transition-all">
-       <div class="text-center mb-8">
-        <div class="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/40 text-yellow-400 text-sm font-semibold mb-4">GROWTH</div>
-        <div class="text-5xl font-bold mb-2">Rs 45,000</div>
-        <div class="text-gray-400">per month</div>
-       </div>
-       <div class="space-y-4 mb-8">
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">60 Social Media Posts</div><div class="text-sm text-gray-400">Unlimited platforms</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">30 Custom Graphics</div><div class="text-sm text-gray-400">Premium + animations</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">20 Reels/Videos</div><div class="text-sm text-gray-400">Advanced editing & effects</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">Free Website Included</div><div class="text-sm text-gray-400">Professional website (Rs 50k value)</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">Complete Analytics Suite</div><div class="text-sm text-gray-400">Real-time dashboards</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">Performance Marketing</div><div class="text-sm text-gray-400">Paid ads management</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">Dedicated Account Manager</div><div class="text-sm text-gray-400">Your personal marketing expert</div></div></div>
-        <div class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><div><div class="font-semibold">24/7 Priority Support</div><div class="text-sm text-gray-400">Always here when you need us</div></div></div>
-       </div>
-       <a href="#" data-page="contact" class="block w-full px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl font-semibold text-center transition-all">Get Started</a>
-       <div class="mt-6 text-center text-sm text-gray-500">For businesses ready to scale</div>
-      </div>
-     </div>
-     
-     <!-- Add-ons Section -->
-     <div class="mb-20 fade-section">
-      <h2 class="text-3xl font-bold text-center mb-12">Additional Services & Add-ons</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 text-center">
-        <div class="text-4xl mb-3">🎥</div>
-        <h4 class="font-bold mb-2">Extra Video Editing</h4>
-        <p class="text-gray-400 text-sm mb-3">Professional video production</p>
-        <div class="text-2xl font-bold text-purple-400">Rs 1,500</div>
-        <div class="text-xs text-gray-500">per video</div>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 text-center">
-        <div class="text-4xl mb-3">📸</div>
-        <h4 class="font-bold mb-2">Professional Photoshoot</h4>
-        <p class="text-gray-400 text-sm mb-3">On-location photography</p>
-        <div class="text-2xl font-bold text-purple-400">Rs 2,000</div>
-        <div class="text-xs text-gray-500">per session</div>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 text-center">
-        <div class="text-4xl mb-3">🎯</div>
-        <h4 class="font-bold mb-2">Paid Ads Campaign</h4>
-        <p class="text-gray-400 text-sm mb-3">Facebook, Instagram, Google</p>
-        <div class="text-2xl font-bold text-purple-400">Rs 5,000</div>
-        <div class="text-xs text-gray-500">+ ad budget</div>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 text-center">
-        <div class="text-4xl mb-3">🎨</div>
-        <h4 class="font-bold mb-2">Brand Identity Design</h4>
-        <p class="text-gray-400 text-sm mb-3">Logo, colors, guidelines</p>
-        <div class="text-2xl font-bold text-purple-400">Rs 8,000</div>
-        <div class="text-xs text-gray-500">one-time</div>
-       </div>
-      </div>
-     </div>
-     
-     <!-- Detailed Plan Comparison Table -->
-     <div class="mb-20 fade-section">
-      <h2 class="text-3xl font-bold text-center mb-12">Detailed Plan Comparison</h2>
-      <div class="overflow-x-auto">
-       <table class="w-full border-collapse">
-        <thead>
-         <tr class="border-b border-purple-500/30">
-          <th class="text-left p-4 font-bold">Features</th>
-          <th class="text-center p-4 font-bold">Basic</th>
-          <th class="text-center p-4 font-bold bg-purple-900/30">Business</th>
-          <th class="text-center p-4 font-bold">Growth</th>
-         </tr>
-        </thead>
-        <tbody class="text-sm">
-         <tr class="border-b border-purple-500/10">
-          <td class="p-4 text-gray-400">Social Media Posts</td>
-          <td class="text-center p-4">15/month</td>
-          <td class="text-center p-4 bg-purple-900/20">30/month</td>
-          <td class="text-center p-4">60/month</td>
-         </tr>
-         <tr class="border-b border-purple-500/10">
-          <td class="p-4 text-gray-400">Custom Graphics</td>
-          <td class="text-center p-4">5/month</td>
-          <td class="text-center p-4 bg-purple-900/20">15/month</td>
-          <td class="text-center p-4">30/month</td>
-         </tr>
-         <tr class="border-b border-purple-500/10">
-          <td class="p-4 text-gray-400">Video Editing (Reels/Shorts)</td>
-          <td class="text-center p-4">—</td>
-          <td class="text-center p-4 bg-purple-900/20">10/month</td>
-          <td class="text-center p-4">20/month</td>
-         </tr>
-         <tr class="border-b border-purple-500/10">
-          <td class="p-4 text-gray-400">Website Development</td>
-          <td class="text-center p-4">—</td>
-          <td class="text-center p-4 bg-purple-900/20">—</td>
-          <td class="text-center p-4 text-green-400">✓ Included</td>
-         </tr>
-         <tr class="border-b border-purple-500/10">
-          <td class="p-4 text-gray-400">Content Strategy</td>
-          <td class="text-center p-4">Basic</td>
-          <td class="text-center p-4 bg-purple-900/20">Advanced</td>
-          <td class="text-center p-4">Premium</td>
-         </tr>
-         <tr class="border-b border-purple-500/10">
-          <td class="p-4 text-gray-400">Analytics & Reporting</td>
-          <td class="text-center p-4">Monthly</td>
-          <td class="text-center p-4 bg-purple-900/20">Weekly</td>
-          <td class="text-center p-4">Real-time</td>
-         </tr>
-         <tr class="border-b border-purple-500/10">
-          <td class="p-4 text-gray-400">Community Management</td>
-          <td class="text-center p-4">—</td>
-          <td class="text-center p-4 bg-purple-900/20 text-green-400">✓</td>
-          <td class="text-center p-4 text-green-400">✓</td>
-         </tr>
-         <tr class="border-b border-purple-500/10">
-          <td class="p-4 text-gray-400">Paid Ads Management</td>
-          <td class="text-center p-4">—</td>
-          <td class="text-center p-4 bg-purple-900/20">—</td>
-          <td class="text-center p-4 text-green-400">✓</td>
-         </tr>
-         <tr class="border-b border-purple-500/10">
-          <td class="p-4 text-gray-400">Dedicated Account Manager</td>
-          <td class="text-center p-4">—</td>
-          <td class="text-center p-4 bg-purple-900/20">—</td>
-          <td class="text-center p-4 text-green-400">✓</td>
-         </tr>
-         <tr>
-          <td class="p-4 text-gray-400">Support</td>
-          <td class="text-center p-4">Email</td>
-          <td class="text-center p-4 bg-purple-900/20">Priority</td>
-          <td class="text-center p-4">24/7</td>
-         </tr>
-        </tbody>
-       </table>
-      </div>
-     </div>
-     
-     <!-- FAQ Section -->
-     <div class="mb-20 fade-section">
-      <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-        <h4 class="font-bold mb-3 flex items-center gap-2"><span class="text-purple-400">Q:</span> Can I upgrade or downgrade my plan?</h4>
-        <p class="text-gray-400 text-sm">Yes! You can change your plan anytime. Upgrades take effect immediately, and downgrades apply from the next billing cycle.</p>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-        <h4 class="font-bold mb-3 flex items-center gap-2"><span class="text-purple-400">Q:</span> Is there a long-term contract?</h4>
-        <p class="text-gray-400 text-sm">No long-term contracts required! All plans are month-to-month. However, we offer discounts for 6-month and annual commitments.</p>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-        <h4 class="font-bold mb-3 flex items-center gap-2"><span class="text-purple-400">Q:</span> What if I need more posts than my plan includes?</h4>
-        <p class="text-gray-400 text-sm">No problem! You can purchase additional posts at Rs 500 per post, or consider upgrading to the next tier for better value.</p>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-        <h4 class="font-bold mb-3 flex items-center gap-2"><span class="text-purple-400">Q:</span> Do you offer custom packages?</h4>
-        <p class="text-gray-400 text-sm">Absolutely! If our standard plans don't fit your needs, we'll create a custom package tailored specifically for your business.</p>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-        <h4 class="font-bold mb-3 flex items-center gap-2"><span class="text-purple-400">Q:</span> What payment methods do you accept?</h4>
-        <p class="text-gray-400 text-sm">We accept bank transfers, eSewa, Khalti, credit/debit cards, and digital wallets. Payment is collected at the start of each month.</p>
-       </div>
-       <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-        <h4 class="font-bold mb-3 flex items-center gap-2"><span class="text-purple-400">Q:</span> Is there a setup fee?</h4>
-        <p class="text-gray-400 text-sm">No setup fees! Your first month's payment covers everything including initial strategy sessions and account setup.</p>
-       </div>
-      </div>
-     </div>
-     
-     <!-- CTA Section - Still Not Sure -->
-     <div class="text-center py-16 rounded-3xl bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 fade-section">
-      <h2 class="text-4xl font-bold mb-4">Still Not Sure Which Plan to Choose?</h2>
-      <p class="text-xl text-gray-400 mb-8">Let's hop on a free consultation call and find the perfect fit for your business</p>
-      <a href="#" data-page="contact" class="inline-block px-10 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl font-bold text-lg transition-all">Book Free Consultation →</a>
-     </div>
-    </div>
-   </section>
-
-   <!-- ========== TESTIMONIALS PAGE (COMPLETE) ========== -->
-   <section id="testimonials" class="page-section pt-24">
-    <div class="max-w-7xl mx-auto px-6 py-20">
-     <div class="text-center max-w-3xl mx-auto mb-16 fade-section">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">Client <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Testimonials</span></h1>
-      <p class="text-xl text-gray-400">Real feedback from real businesses</p>
-     </div>
-     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 fade-section">
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-       <div class="flex gap-1 mb-4 text-yellow-400"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-       <p class="text-gray-300 mb-6">"Gracelight transformed our social media presence completely. Engagement up 300% in just two months! Highly recommend."</p>
-       <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center font-bold">DR</div><div><div class="font-semibold">Dr. Rajesh Kumar</div><div class="text-sm text-gray-500">City Hospital</div></div></div>
-      </div>
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-       <div class="flex gap-1 mb-4 text-yellow-400"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-       <p class="text-gray-300 mb-6">"The website they built for us is absolutely stunning. We've seen a significant increase in online inquiries. Professional team!"</p>
-       <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center font-bold">PS</div><div><div class="font-semibold">Priya Sharma</div><div class="text-sm text-gray-500">Sunrise Academy</div></div></div>
-      </div>
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-       <div class="flex gap-1 mb-4 text-yellow-400"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-       <p class="text-gray-300 mb-6">"Their video editing went viral! Amazing creativity. Our sales increased 40% since we started working together."</p>
-       <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center font-bold">AM</div><div><div class="font-semibold">Amit Mehta</div><div class="text-sm text-gray-500">Brew & Bites Cafe</div></div></div>
-      </div>
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-       <div class="flex gap-1 mb-4 text-yellow-400"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-       <p class="text-gray-300 mb-6">"Helped me establish strong LinkedIn presence. I'm now getting 3x more quality leads. Exceptional service!"</p>
-       <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center font-bold">SK</div><div><div class="font-semibold">Sanjay Kapoor</div><div class="text-sm text-gray-500">Business Consultant</div></div></div>
-      </div>
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-       <div class="flex gap-1 mb-4 text-yellow-400"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-       <p class="text-gray-300 mb-6">"Complete rebrand delivered beyond expectations. Customer base grew 150% in 6 months. Incredible work!"</p>
-       <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center font-bold">MG</div><div><div class="font-semibold">Meera Gupta</div><div class="text-sm text-gray-500">Boutique Owner</div></div></div>
-      </div>
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-       <div class="flex gap-1 mb-4 text-yellow-400"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-       <p class="text-gray-300 mb-6">"Best decision for our restaurant! Social media strategy made us the talk of the town. Reservations up 200%!"</p>
-       <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold">VT</div><div><div class="font-semibold">Vikram Thakur</div><div class="text-sm text-gray-500">The Spice Route</div></div></div>
-      </div>
-     </div>
-     <div class="grid md:grid-cols-4 gap-6 mt-16 fade-section">
-      <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-       <div class="text-4xl font-bold text-purple-400">5.0</div>
-       <div class="text-gray-400">Average Rating</div>
-      </div>
-      <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-       <div class="text-4xl font-bold text-purple-400">98%</div>
-       <div class="text-gray-400">Client Retention</div>
-      </div>
-      <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-       <div class="text-4xl font-bold text-purple-400">500+</div>
-       <div class="text-gray-400">Projects Done</div>
-      </div>
-      <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-       <div class="text-4xl font-bold text-purple-400">24/7</div>
-       <div class="text-gray-400">Support</div>
-      </div>
-     </div>
-    </div>
-   </section>
-
-   <!-- ========== PROJECT DETAIL PAGE ========== -->
-   <section id="project-detail" class="page-section pt-24">
-    <div class="max-w-7xl mx-auto px-6 py-20">
-     <div class="text-center mb-12">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">Project <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" id="project-title">Details</span></h1>
-      <p class="text-xl text-gray-400" id="project-category">Category</p>
-     </div>
-     <div class="max-w-4xl mx-auto">
-      <div class="p-10 rounded-3xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 border border-purple-500/30 mb-8">
-       <div class="flex justify-center mb-8">
-        <div id="project-icon" class="text-8xl">🎬</div>
-       </div>
-       <h2 class="text-3xl font-bold mb-4 text-center" id="project-name">Brand Story Reel</h2>
-       <div class="grid md:grid-cols-2 gap-8 mt-8">
-        <div>
-         <h3 class="font-bold text-xl mb-3 text-purple-400">Client</h3>
-         <p class="text-gray-300" id="project-client">Urban Threads</p>
-         <h3 class="font-bold text-xl mb-3 mt-6 text-purple-400">Objective</h3>
-         <p class="text-gray-300" id="project-objective">Increase brand awareness through cinematic storytelling</p>
-        </div>
-        <div>
-         <h3 class="font-bold text-xl mb-3 text-purple-400">Results</h3>
-         <p class="text-gray-300" id="project-results">120K+ views, 8K+ likes, 340% engagement increase</p>
-         <h3 class="font-bold text-xl mb-3 mt-6 text-purple-400">Tools Used</h3>
-         <p class="text-gray-300" id="project-tools">Premiere Pro, After Effects</p>
-        </div>
-       </div>
-       <div class="mt-8 text-center">
-        <a href="#" data-page="portfolio" class="inline-block px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold transition-all mt-4">Back to Portfolio</a>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-
-   <!-- ========== CONTACT PAGE (COMPLETE) ========== -->
-   <section id="contact" class="page-section pt-24">
-    <div class="max-w-7xl mx-auto px-6 py-20">
-     <div class="text-center max-w-3xl mx-auto mb-16 fade-section">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">Get in <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Touch</span></h1>
-      <p class="text-xl text-gray-400">Let's discuss your project and create something amazing together</p>
-     </div>
-     <div class="grid lg:grid-cols-2 gap-12 fade-section">
-      <div>
-       <h2 class="text-3xl font-bold mb-8">Let's Talk About Your Project</h2>
-       <p class="text-gray-400 text-lg mb-8">Whether you're just starting out or looking to scale, we're here to help. Our team will work with you to create a customized strategy that delivers results.</p>
-       <div class="space-y-6">
-        <div class="flex items-center gap-4">
-         <div class="w-14 h-14 rounded-xl bg-purple-900/50 border border-purple-500/30 flex items-center justify-center flex-shrink-0"><span class="text-2xl">📧</span></div>
-         <div><div class="text-sm text-gray-500">Email us</div><div id="contact-email" class="font-semibold text-lg">hello@gracelightcreations.com</div></div>
-        </div>
-        <div class="flex items-center gap-4">
-         <div class="w-14 h-14 rounded-xl bg-purple-900/50 border border-purple-500/30 flex items-center justify-center flex-shrink-0"><span class="text-2xl">📱</span></div>
-         <div><div class="text-sm text-gray-500">Call us</div><div id="contact-phone" class="font-semibold text-lg">+977 9807007817</div></div>
-        </div>
-        <div class="flex items-center gap-4">
-         <div class="w-14 h-14 rounded-xl bg-purple-900/50 border border-purple-500/30 flex items-center justify-center flex-shrink-0"><span class="text-2xl">⏱️</span></div>
-         <div><div class="text-sm text-gray-500">Response time</div><div class="font-semibold text-lg">Within 24 hours</div></div>
-        </div>
-        <div class="mt-8 p-6 rounded-2xl bg-gradient-to-br from-[#25D366]/10 to-green-500/10 border border-[#25D366]/20">
-         <h3 class="font-bold mb-3 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.371-.025-.521-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.012-.57-.012-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.677-.236-.375a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.158 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.89-11.893 0-3.18-1.24-6.162-3.495-8.411"/></svg> WhatsApp Business</h3>
-         <p class="text-gray-400 text-sm mb-4">Get instant responses to your queries on WhatsApp</p>
-         <a href="https://wa.me/9779807007817?text=Hi%20Gracelight%20Creations!%20I%20have%20a%20question%20about..." target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-[#25D366] text-white rounded-lg hover:bg-green-600 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.371-.025-.521-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.012-.57-.012-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.677-.236-.375a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.158 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.89-11.893 0-3.18-1.24-6.162-3.495-8.411"/></svg> Message us on WhatsApp</a>
-        </div>
-       </div>
-      </div>
-      <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-       <form id="contact-form" class="space-y-6">
-        <div class="grid md:grid-cols-2 gap-6">
-         <div><label for="name" class="block text-sm font-medium mb-2">Full Name *</label><input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-purple-500/30 text-white placeholder-gray-500 transition-all"></div>
-         <div><label for="email" class="block text-sm font-medium mb-2">Email *</label><input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-purple-500/30 text-white placeholder-gray-500 transition-all"></div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-         <div><label for="phone" class="block text-sm font-medium mb-2">Phone</label><input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-purple-500/30 text-white placeholder-gray-500 transition-all"></div>
-         <div><label for="service" class="block text-sm font-medium mb-2">Service *</label>
-          <select id="service" name="service" required class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-purple-500/30 text-white transition-all">
-           <option value="" class="bg-slate-900">Select service</option>
-           <option value="social" class="bg-slate-900">Social Media</option>
-           <option value="video" class="bg-slate-900">Video Editing</option>
-           <option value="graphic" class="bg-slate-900">Graphic Design</option>
-           <option value="website" class="bg-slate-900">Website</option>
-           <option value="branding" class="bg-slate-900">Branding</option>
-           <option value="complete" class="bg-slate-900">Complete Package</option>
-          </select>
-         </div>
-        </div>
-        <div><label for="message" class="block text-sm font-medium mb-2">Message *</label><textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-purple-500/30 text-white placeholder-gray-500 transition-all resize-none"></textarea></div>
-        <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl font-bold text-lg transition-all">Send Message →</button>
-        <div id="form-success" class="hidden text-center p-4 rounded-xl bg-green-500/20 border border-green-500/50"><p class="text-green-400 font-semibold">✓ Message sent! We'll reply within 24 hours.</p></div>
-       </form>
-      </div>
-     </div>
-    </div>
-   </section>
-
-   <!-- Footer -->
-   <footer class="py-12 border-t border-purple-500/20">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-     <div class="flex items-center justify-center gap-3 mb-6">
-      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center font-bold"><span class="text-white">G</span></div>
-      <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Gracelight Creations</span>
-     </div>
-     <p class="text-gray-400 mb-6">Transforming businesses into powerful digital brands</p>
-     <div class="flex justify-center gap-4 mb-6">
-      <a href="https://wa.me/9779807007817" target="_blank" class="p-2 rounded-full bg-slate-800 hover:bg-slate-700 transition-colors">
-       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.371-.025-.521-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.012-.57-.012-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.677-.236-.375a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.158 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.89-11.893 0-3.18-1.24-6.162-3.495-8.411"/></svg>
-      </a>
-      <a href="mailto:hello@gracelightcreations.com" class="p-2 rounded-full bg-slate-800 hover:bg-slate-700 transition-colors">
-       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
-      </a>
-      <a href="tel:+9779807007817" class="p-2 rounded-full bg-slate-800 hover:bg-slate-700 transition-colors">
-       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.5-5.2-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1h-4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-4c0-.6-.4-1-1-1zm-2-9h2c0 4.4-3.6 8-8 8v-2c3.3 0 6-2.7 6-6zm-4 0h2c0 2.8-2.2 5-5 5v-2c1.7 0 3-1.3 3-3z"/></svg>
-      </a>
-     </div>
-     <div class="text-sm text-gray-500">© 2024 Gracelight Creations. All rights reserved.</div>
-    </div>
-   </footer>
+    </footer>
   </div>
 
   <script>
     const defaultConfig = {
-      hero_headline: "Transform Your Digital Presence Into Growth",
-      hero_subheading: "We help businesses unlock their full potential through creative content marketing, stunning designs, and data-driven strategies.",
-      contact_email: "hello@gracelightcreations.com",
-      contact_phone: "+977 9807007817"
+      hero_headline: "Visual Stories, Perfectly Edited",
+      hero_subheading: "I'm Sujal – a passionate video editor with a keen eye for detail, crafting engaging narratives for YouTube, commercials, social media, and more.",
+      contact_email: "sujal.dhakal.video@gmail.com",
+      contact_phone: "+977 980-7007817"
     };
     
     function initNavigation() {
@@ -1718,31 +803,15 @@
       const detailsBtns = document.querySelectorAll('.details-btn');
       const pages = document.querySelectorAll('.page-section');
       
+      // Updated project data for video projects
       const projectData = {
-        video1: { title: 'Brand Story Reel', category: 'Videos', icon: '🎬', client: 'Urban Threads', objective: 'Increase brand awareness through cinematic storytelling', results: '120K+ views, 8K+ likes, 340% engagement increase', tools: 'Premiere Pro, After Effects' },
-        video2: { title: 'Product Launch Reel', category: 'Videos', icon: '🎥', client: 'TechSphere', objective: 'Generate hype for new gadget', results: '500K+ views, 15K+ shares, 200% increase in pre-orders', tools: 'Premiere Pro, After Effects' },
-        video3: { title: 'Customer Testimonial', category: 'Videos', icon: '🎞️', client: 'HealthFirst Clinic', objective: 'Build trust through patient stories', results: '50K+ views, 4.9★ rating boost', tools: 'Premiere Pro, Audacity' },
-        video4: { title: 'Event Highlights', category: 'Videos', icon: '📹', client: 'TechConf 2025', objective: 'Capture key moments', results: '200K+ views, 80% positive feedback', tools: 'Premiere Pro, DaVinci Resolve' },
-        video5: { title: 'Behind the Scenes', category: 'Videos', icon: '📽️', client: 'Fashion Forward', objective: 'Humanize the brand', results: '150K+ views, 10K+ new followers', tools: 'Final Cut Pro, Motion' },
-        video6: { title: 'Animation Explainer', category: 'Videos', icon: '🎦', client: 'FinTech Solutions', objective: 'Simplify complex concepts', results: '300K+ views, 25% increase in signups', tools: 'After Effects, Illustrator' },
-        website1: { title: 'E-Commerce Store', category: 'Websites', icon: '💻', client: 'CraftHive', objective: 'Increase online sales', results: '40% conversion boost, 2.5s load time, 180% lead increase', tools: 'Shopify, Liquid, Tailwind CSS' },
-        website2: { title: 'Corporate Website', category: 'Websites', icon: '🌐', client: 'McKinsey & Co', objective: 'Professional brand presence', results: '60% increase in inquiries, 2s load time', tools: 'Webflow, GSAP' },
-        website3: { title: 'Restaurant Landing', category: 'Websites', icon: '📱', client: 'Spice Garden', objective: 'Drive online orders', results: '150% increase in takeaway orders', tools: 'WordPress, Elementor' },
-        website4: { title: 'Portfolio Showcase', category: 'Websites', icon: '⚙️', client: 'Alex Rivera Photography', objective: 'Showcase work elegantly', results: '300% more booking requests', tools: 'Framer, Figma' },
-        graphic1: { title: 'Social Media Kit', category: 'Graphics', icon: '🎨', client: 'Brew & Bites', objective: 'Consistent branding', results: '15 posts, 5 story templates, 200% engagement', tools: 'Photoshop, Illustrator' },
-        graphic2: { title: 'Instagram Templates', category: 'Graphics', icon: '🖼️', client: 'Fitness Coach', objective: 'Save time on content creation', results: '12 templates, 3K+ saves', tools: 'Canva, Illustrator' },
-        graphic3: { title: 'Infographic', category: 'Graphics', icon: '📊', client: 'Global Health Org', objective: 'Visualize data clearly', results: '50K+ views, featured in report', tools: 'Illustrator, InDesign' },
-        graphic4: { title: 'Newsletter Design', category: 'Graphics', icon: '📰', client: 'Marketing Weekly', objective: 'Increase open rates', results: '45% open rate, 12% CTR', tools: 'Photoshop, Figma' },
-        graphic5: { title: 'Poster Series', category: 'Graphics', icon: '📌', client: 'Summer Music Fest', objective: 'Create buzz', results: 'Sold out in 2 weeks', tools: 'Illustrator, Photoshop' },
-        graphic6: { title: 'Business Cards', category: 'Graphics', icon: '📇', client: 'Law Firm', objective: 'Convey professionalism', results: '98% client satisfaction', tools: 'InDesign, Illustrator' },
-        graphic7: { title: 'Brochure', category: 'Graphics', icon: '📁', client: 'Wanderlust Travel', objective: 'Showcase tour packages', results: '30% increase in bookings', tools: 'InDesign, Photoshop' },
-        graphic8: { title: 'Packaging Design', category: 'Graphics', icon: '📦', client: 'GreenBite', objective: 'Eco-friendly appeal', results: 'Won sustainability award', tools: 'Illustrator, Dimensions' },
-        graphic9: { title: 'Menu Design', category: 'Graphics', icon: '📋', client: 'La Belle Table', objective: 'Elegant dining experience', results: '20% higher check average', tools: 'InDesign, Illustrator' },
-        graphic10: { title: 'Ebook Cover', category: 'Graphics', icon: '📒', client: 'Digital Marketing Pro', objective: 'Stand out on Amazon', results: 'Bestseller rank #50', tools: 'Photoshop, Illustrator' },
-        logo1: { title: 'Logo & Brand Identity', category: 'Logos', icon: '🔤', client: 'Zen Yoga Studio', objective: 'Fresh, calming identity', results: 'Primary logo, color palette, typography guidelines', tools: 'Illustrator, Figma' },
-        logo2: { title: 'Wordmark Logo', category: 'Logos', icon: '🅰️', client: 'Moda Fashion', objective: 'Elegant typography', results: 'Used across all channels, 40% brand recall increase', tools: 'Illustrator, Glyphs' },
-        logo3: { title: 'Mascot Logo', category: 'Logos', icon: '🦊', client: 'Wildcats Sports', objective: 'Energetic mascot', results: 'Merchandise sales up 150%', tools: 'Illustrator, Procreate' },
-        logo4: { title: 'Abstract Logo', category: 'Logos', icon: '🔷', client: 'Nexus AI', objective: 'Futuristic feel', results: 'Featured on Behance', tools: 'Illustrator, Blender' }
+        vid1: { title: 'Travel Vlog: Thailand', category: 'YouTube Video', icon: '🎬', client: 'Wanderlust Travels', objective: 'Create an engaging travel vlog with cinematic color grading and motion graphics', results: '120k+ views, 8k likes', tools: 'Premiere Pro, After Effects, Lightroom' },
+        vid2: { title: 'Gaming Montage', category: 'YouTube Video', icon: '🎮', client: 'GamerX', objective: 'High-energy gaming edit with effects and transitions', results: 'Featured on gaming channel, 200k+ views', tools: 'Premiere Pro, After Effects' },
+        vid3: { title: 'Product Promo: SmartWatch', category: 'Commercial', icon: '📹', client: 'TechGear', objective: '30-second ad highlighting features and lifestyle', results: 'Increased conversions by 25%', tools: 'Premiere Pro, DaVinci Resolve' },
+        vid4: { title: 'Corporate Brand Video', category: 'Commercial', icon: '🏢', client: 'InnoCorp', objective: 'Professional brand story with interviews and b-roll', results: 'Used in investor pitch, raised $2M', tools: 'Premiere Pro, After Effects' },
+        vid5: { title: 'Indie Music Video', category: 'Music Video', icon: '🎵', client: 'The Night Owls', objective: 'Artistic music video with visual effects', results: '10k+ views in first week', tools: 'Premiere Pro, After Effects, DaVinci Resolve' },
+        vid6: { title: 'Wedding Highlights', category: 'Events', icon: '💒', client: 'Anjali & Jay', objective: 'Cinematic wedding highlight film', results: 'Couple extremely happy, 500+ shares', tools: 'Premiere Pro, DaVinci Resolve' },
+        vid7: { title: 'Music Festival Aftermovie', category: 'Events', icon: '🎪', client: 'Sunset Fest', objective: 'Energetic recap with fast cuts and crowd moments', results: 'Used for next year promotion', tools: 'Premiere Pro, After Effects' }
       };
 
       detailsBtns.forEach(btn => {
@@ -1771,16 +840,30 @@
     function initFilter() {
       const filterTabs = document.querySelectorAll('.filter-tab');
       const projectItems = document.querySelectorAll('.project-item');
+      
+      function applyFilter(filterValue) {
+        projectItems.forEach(item => {
+          if (filterValue === 'all') {
+            item.style.display = 'block';
+          } else {
+            item.style.display = item.getAttribute('data-category') === filterValue ? 'block' : 'none';
+          }
+        });
+      }
+      
       filterTabs.forEach(tab => {
         tab.addEventListener('click', () => {
           filterTabs.forEach(t => t.classList.remove('active'));
           tab.classList.add('active');
           const filterValue = tab.getAttribute('data-filter');
-          projectItems.forEach(item => {
-            item.style.display = (filterValue === 'all' || item.getAttribute('data-category') === filterValue) ? 'block' : 'none';
-          });
+          applyFilter(filterValue);
         });
       });
+      
+      const activeTab = document.querySelector('.filter-tab.active');
+      if (activeTab) {
+        applyFilter(activeTab.getAttribute('data-filter'));
+      }
     }
     
     function initContactForm() {
@@ -1795,7 +878,7 @@
           const serviceSelect = document.getElementById('service');
           const service = serviceSelect?.options[serviceSelect.selectedIndex]?.text || 'Not selected';
           const message = document.getElementById('message')?.value.trim() || 'No message';
-          const whatsappMessage = `*New Inquiry from Gracelight Website*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Message:* ${message}`;
+          const whatsappMessage = `*New Inquiry from Portfolio*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Message:* ${message}`;
           window.open(`https://wa.me/9779807007817?text=${whatsappMessage}`, '_blank');
           if (successMessage) {
             successMessage.classList.remove('hidden');
@@ -1806,7 +889,6 @@
       }
     }
 
-    // ========== SMOOTH SCROLL ANIMATIONS - NO GLITCH ==========
     function initNavbarScroll() {
       const navbar = document.querySelector('nav');
       const container = document.getElementById('app-container');
@@ -1842,64 +924,23 @@
             const target = parseFloat(el.getAttribute('data-target'));
             if (el.classList.contains('counted')) return;
             el.classList.add('counted');
-            if (el.getAttribute('data-target') === '5') {
-              let current = 0;
-              const increment = 0.1;
-              const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                  el.textContent = target.toFixed(1) + '★';
-                  clearInterval(timer);
-                } else {
-                  el.textContent = current.toFixed(1);
-                }
-              }, 50);
-            } else {
-              let current = 0;
-              const increment = Math.ceil(target / 50);
-              const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                  el.textContent = target + (el.getAttribute('data-target') === '98' ? '%' : '+');
-                  clearInterval(timer);
-                } else {
-                  el.textContent = current;
-                }
-              }, 20);
-            }
+            let current = 0;
+            const increment = Math.ceil(target / 50);
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                el.textContent = target + (el.getAttribute('data-target') === '98' ? '%' : '+');
+                clearInterval(timer);
+              } else {
+                el.textContent = current;
+              }
+            }, 20);
           }
         });
       }, { threshold: 0.5, root: document.getElementById('app-container') });
       statNumbers.forEach(num => countObserver.observe(num));
     }
     
-    async function onConfigChange(config) {
-      const heroHeadline = document.getElementById('hero-headline');
-      const heroSubheading = document.getElementById('hero-subheading');
-      const contactEmail = document.getElementById('contact-email');
-      const contactPhone = document.getElementById('contact-phone');
-      if (heroHeadline) heroHeadline.textContent = config.hero_headline || defaultConfig.hero_headline;
-      if (heroSubheading) heroSubheading.textContent = config.hero_subheading || defaultConfig.hero_subheading;
-      if (contactEmail) contactEmail.textContent = config.contact_email || defaultConfig.contact_email;
-      if (contactPhone) contactPhone.textContent = config.contact_phone || defaultConfig.contact_phone;
-    }
-    
-    async function initSDK() {
-      if (window.elementSdk) {
-        await window.elementSdk.init({
-          defaultConfig: defaultConfig,
-          onConfigChange: onConfigChange,
-          mapToCapabilities: () => ({ recolorables: [], borderables: [], fontEditable: undefined, fontSizeable: undefined }),
-          mapToEditPanelValues: (config) => new Map([
-            ["hero_headline", config.hero_headline || defaultConfig.hero_headline],
-            ["hero_subheading", config.hero_subheading || defaultConfig.hero_subheading],
-            ["contact_email", config.contact_email || defaultConfig.contact_email],
-            ["contact_phone", config.contact_phone || defaultConfig.contact_phone]
-          ])
-        });
-      }
-    }
-
     function initMouseGlow() {
       const cursor = document.getElementById('glow-cursor');
       if (!cursor) return;
@@ -1912,24 +953,24 @@
         el.addEventListener('mouseenter', () => {
           cursor.style.width = '300px';
           cursor.style.height = '300px';
-          cursor.style.background = 'radial-gradient(circle, rgba(236,72,153,0.3) 0%, rgba(168,85,247,0.2) 40%, transparent 70%)';
+          cursor.style.background = 'radial-gradient(circle, rgba(30,58,138,0.3) 0%, rgba(109,40,217,0.2) 40%, transparent 70%)';
         });
         el.addEventListener('mouseleave', () => {
           cursor.style.width = '400px';
           cursor.style.height = '400px';
-          cursor.style.background = 'radial-gradient(circle, rgba(168,85,247,0.25) 0%, rgba(236,72,153,0.15) 40%, transparent 70%)';
+          cursor.style.background = 'radial-gradient(circle, rgba(109,40,217,0.25) 0%, rgba(30,58,138,0.15) 40%, transparent 70%)';
         });
       });
     }
     
+    // Initialize everything
     initNavigation();
     initProjectDetails();
     initFilter();
     initContactForm();
-    initSDK();
     initMouseGlow();
     initNavbarScroll();
     initScrollAnimations();
   </script>
- </body>
+</body>
 </html>
